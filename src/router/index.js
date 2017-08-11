@@ -1,15 +1,26 @@
-import Vue from 'vue'
-import Router from 'vue-router'
-import login from '@/page/login/login.vue'
+import App from '../App'
 
-Vue.use(Router)
+const login = r => require.ensure([], () => r(require('../page/login/login.vue')), 'login')
+const home = r => require.ensure([], () => r(require('../page/home/home.vue')), 'home')
+const store = r => require.ensure([], () => r(require('../page/store/store.vue')), 'store')
 
-export default new Router({
-  routes: [
-    {
-      path: '/login',
-      name: 'login',
-      component: login
-    }
-  ]
-})
+
+export default [{
+	path: '/',
+	component: App,
+  	children: [  		
+  		{
+			path: '/home',					   
+		    component: home
+		},
+		{
+			path: '/login',					   
+		    component: login
+		},
+		{
+			path: '/store',					   
+		    component: store
+		}
+	]
+}]
+

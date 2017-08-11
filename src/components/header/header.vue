@@ -11,10 +11,12 @@
 		<a href="/" class="user-admin"><i class="icons icon-w40 ico-user"></i>admin</a>
 		<a href="login.html" class="user-login-out"><i class="icons icon-w40 ico-login-out"></i>退出</a>
 	</div>
+	
   </div>
 </template>
 
 <script>
+
 export default {
   
   data () {

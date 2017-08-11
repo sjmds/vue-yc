@@ -10,7 +10,7 @@ export default {
   
   data () {
     return {
-      msg: 'Welcome to Your Home'
+      msg: 'Welcome to Your store'
     }
   }
 }
