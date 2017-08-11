@@ -1,19 +1,12 @@
-*{margin:0;padding:0}
-.clearfix{zoom:1;*zoom:1}
-.clearfix:after {display:block;content:'\20';clear:both;zoom:1;*zoom:1;visibility:hidden;height:0}
-a{cursor:pointer;cursor:hand;}
-img{outline:0;}
-.fl{float:left!important;}
-.fr{float:right!important;}
+
 .relative{position:relative;left:0;top:0;z-index:0;}
 .bg-white{background-color:#fff;}
 .sline,.xline{margin:20px 0;width:100%;height:0;font-size:0;line-height:0;}
 .sline{border-top:1px solid #333;}
 .xline{border-top:1px dashed #333;}
-html,body{width:100%;height:100%;}
-body{line-height:1.5;background-color:#f2f2f2;}
-input[type="text"]:focus,input[type="number"]:focus,input[type="button"]:focus,input[type="tel"]:focus{outline:1px solid #0087ff;box-shadow:0 0 1px #0087ff inset;}
-input[type="file"]{border:0;}
+
+body{background-color:#f2f2f2;}
+
 .blue{display:inline-block;color:#169BD5;}
 .red{display:inline-block;color:#f00;}
 .green{display:inline-block;color:green;}
@@ -45,7 +38,7 @@ input[type="file"]{border:0;}
 .nav-con .layui-nav-tree .layui-this{background:none!important;}
 .nav-con .layui-nav-tree .layui-this a{background:none!important;color:#56C32B;}
 /*login*/
-.login-body{width:100%;height:100%;background:url(../images/bg-login.jpg) no-repeat;background-size:cover;}
+.login-body{width:100%;height:100%;background:url(/static/images/bg-login.jpg) no-repeat;background-size:cover;}
 .login-con{width:620px;height:600px;position:absolute;left:0;top:0;right:0;bottom:0;margin:auto;}
 .login-con h1,.login-con p{text-align:center;font-weight:bold;color:#fff;}
 .login-con h1{font-size:60px;}
@@ -123,7 +116,7 @@ input[type="file"]{border:0;}
 .add-info-form .upload-browse span{position:absolute;top:0;right:0;padding:0 10px;width:40px;background-color: rgba(0, 153, 255, 1);font-size:12px;text-align:center;color:#fff;}
 .add-info-form .layui-btn{width:120px;font-size:16px;}
 .layui-upload-headimg{width:162px!important;height:162px;border:1px solid #ccc;}
-.upload-headimg{width:100%;height:100%;background:url(../images/defaultimg.png) no-repeat;}
+.upload-headimg{width:100%;height:100%;background:url(/static/images/defaultimg.png) no-repeat;}
 .upload-headimg img{width:100%;height:100%;}
 .yc-upload-text{margin-top:15px;text-align:center;}
 /*审核详情*/

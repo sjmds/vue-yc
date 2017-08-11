@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div id="app">
     <h1>{{ msg }}</h1>
     
   </div>
@@ -10,7 +10,7 @@ export default {
   
   data () {
     return {
-      msg: 'Welcome to Your store'
+      msg: 'Welcome to Your Store'
     }
   }
 }
