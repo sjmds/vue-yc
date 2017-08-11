@@ -1,0 +1,253 @@
+*{margin:0;padding:0}
+.clearfix{zoom:1;*zoom:1}
+.clearfix:after {display:block;content:'\20';clear:both;zoom:1;*zoom:1;visibility:hidden;height:0}
+a{cursor:pointer;cursor:hand;}
+img{outline:0;}
+.fl{float:left!important;}
+.fr{float:right!important;}
+.relative{position:relative;left:0;top:0;z-index:0;}
+.bg-white{background-color:#fff;}
+.sline,.xline{margin:20px 0;width:100%;height:0;font-size:0;line-height:0;}
+.sline{border-top:1px solid #333;}
+.xline{border-top:1px dashed #333;}
+html,body{width:100%;height:100%;}
+body{line-height:1.5;background-color:#f2f2f2;}
+input[type="text"]:focus,input[type="number"]:focus,input[type="button"]:focus,input[type="tel"]:focus{outline:1px solid #0087ff;box-shadow:0 0 1px #0087ff inset;}
+input[type="file"]{border:0;}
+.blue{display:inline-block;color:#169BD5;}
+.red{display:inline-block;color:#f00;}
+.green{display:inline-block;color:green;}
+.limegreen{display:inline-block;color:limegreen;}
+.firebrick{display:inline-block;color:firebrick;}
+/*header*/
+.header{padding:30px;width:100%;box-sizing:border-box;background-color:rgba(35, 49, 62, 1);}
+.logo{width:600px;}
+.logo a,.login-user a{color:#fff;}
+.logo img{float:left;margin-right:20px;width:100px;height:100px;}
+.logo h1{margin-top:10px;font-size:36px;font-weight:bold;}
+.logo p{white-space:nowrap;text-transform:uppercase;}
+.login-user{margin-top:30px;}
+.login-user i{margin-right:10px;}
+.login-user a{float:left;margin-right:50px;font-size:20px;}
+/*nav*/
+.content{width:100%;height:100%;position:relative;left:0;top:0;right:0;z-index:0;}
+.nav-con{width:200px;background-color:#4f5a65;position:absolute;left:0;top:0;bottom:0;}
+.nav-con .layui-nav{padding:20px 0;background-color:#4f5a65;}
+.nav-con .layui-nav-tree{}
+.nav-con .layui-nav-tree .layui-nav-item a{padding:0 20px;height:60px;line-height:60px;font-size:18px;color:#ccc;}
+.nav-con .layui-nav-tree .layui-nav-item>a>i{margin-right:10px;}
+.nav-con .layui-nav-tree .layui-nav-more{top:25px;}
+.nav-con .layui-nav-tree .layui-nav-item .layui-nav-child{}
+.nav-con .layui-nav-tree .layui-nav-item .layui-nav-child a{padding-left:60px;}
+.nav-con .layui-nav-tree .layui-nav-bar{background-color: rgba(84, 194, 43, 1)!important;}
+.nav-con .layui-nav-tree .layui-nav-item a:hover
+,.nav-con .layui-nav-tree .layui-nav-itemed>a{background-color: rgba(35, 49, 62, 1);}
+.nav-con .layui-nav-tree .layui-this{background:none!important;}
+.nav-con .layui-nav-tree .layui-this a{background:none!important;color:#56C32B;}
+/*login*/
+.login-body{width:100%;height:100%;background:url(../images/bg-login.jpg) no-repeat;background-size:cover;}
+.login-con{width:620px;height:600px;position:absolute;left:0;top:0;right:0;bottom:0;margin:auto;}
+.login-con h1,.login-con p{text-align:center;font-weight:bold;color:#fff;}
+.login-con h1{font-size:60px;}
+.login-con p{font-size:20px;white-space:nowrap;text-transform:uppercase;}
+.login-logo{width:110px;height:110px;position:absolute;left:50%;top:-55px;margin-left:-55px;}
+.login-form{margin-top:90px;padding-bottom:60px;background-color: rgba(255, 255, 255, .8);border-radius: 10px;}
+.log-form{padding:60px 0 0 124px;}
+.log-form .form-group{margin-top:30px;}
+.log-form .form-group input{padding:0 10px;width:365px;height:46px;box-sizing:border-box;border:0;box-shadow:0 0 15px rgba(255, 255, 255, 0.3);;font-size:20px;}
+.log-form .form-group .input-sub{height:60px;background-color: rgba(84, 194, 43, 1);box-shadow: 0px 1px 10px rgba(86, 195, 43, 1);letter-spacing:20px;text-align:center;color:#fff;}
+/*content-con*/
+.content-con{margin-left:200px;padding:40px;width:100%;box-sizing:border-box;}
+.content-padding{padding:20px;box-sizing:border-box;}
+.say-hello{padding:5%;}
+.say-hello p{padding:.75% 0;font-size:30px;}
+/*商品管理、新增用户*/
+.nav-home{}
+.nav-home dl{float:left;margin:2% 2% 0 0;padding:40px;width:32%;box-sizing:border-box;background-color:#fff;}
+.nav-home dl:nth-child(3n+3){margin-right:0;}
+.nav-home dl>a{display:block;width:100%;height:100%;}
+.nav-home dl dt{float:left;}
+.nav-home dl dt img{width:100px;height:100px;}
+.nav-home dl dd{float:right;text-align:right;}
+.nav-home dl dd h3{font-size:28px;}
+.nav-home dl dd p{margin-top:5%;font-size:18px;color:#999;}
+.nav-home dl:hover{box-shadow:0 0 15px rgba(0,0,0,.2)}
+/*仓库管理*/
+.sy-tab{}
+.sy-tab ul li{float:left;padding:0 20px;min-width:100px;height:40px;border:1px solid rgba(89, 199, 44, 1);background-color:rgba(255, 255, 255, 1);box-sizing:border-box;font-size:18px;text-align:center;line-height:40px;color:#333;cursor:pointer;}
+.sy-tab ul li a{display:block;}
+.sy-tab ul li.on{background-color:rgba(89, 199, 44, 1);color:#fff;}
+.sy-tab ul li.on a{color:#fff;}
+/*查询form*/
+.layui-form{font-size:16px;}
+.search-form .layui-inline{padding:5px 0;}
+.search-form label{padding:0 10px;}
+.search-form input{width:140px;}
+.layui-upload-button input{width:100%;}
+.search-form .input-longwidth{width:170px;}
+.search-form .layui-btn{width:110px;border-radius:5px;font-size:16px;}
+.layui-input, .layui-select, .layui-textarea{border:1px solid #ccc;}
+/*layui-table*/
+.layui-table thead,.layui-table tbody,.layui-table tfoot{width:100%;}
+
+.layui-table thead tr{background-color:#666;}
+.layui-table thead tr:hover{background-color:#666;}
+.layui-table tr td{padding:15px 2px;border:1px solid #ccc;text-align:center;}
+.layui-table thead tr td{color:#fff;}
+.layui-table tbody tr td{color:#333;}
+.layui-table .edit-a{display:inline-block;padding:0 15px;color:#56C32B;}
+.layui-table .edit-cancel,.layui-table .more-details{color:#09F;}
+.layui-table .edit-cancel{border-left:1px solid #333;}
+
+.data-page{margin:20px 30px 0;}
+
+.layui-form input[type="checkbox"],.layui-table input[type="checkbox"]{display:inline-block;width:15px;height:15px;}
+.layui-form .layui-form-checkbox,.search-form .layui-form-checkbox,.add-info-form input[type="checkbox"]{display:none;}
+/*上下架*/
+.goodsAction{margin-bottom:20px;}
+.goodsAction ul li{float:left;margin-right:10px;padding:0 10px;min-width:80px;height: 40px;border:1px solid #999;text-align:center;line-height:40px;color:#666;cursor:pointer;}
+.goodsAction ul li a{color:inherit;}
+.goodsAction ul li.on{border:1px solid rgba(89, 199, 44, 1);background-color:rgba(89, 199, 44, 1) ;color:#fff;}
+/*新增*/
+.add-info-form{}
+.add-info-form .layui-form-label{width:135px;}
+.add-info-form .layui-input-inline{width:260px;}
+.add-info-form .layui-input-inline .yc-s-t{line-height:38px;}
+.longer{width:50%!important;}
+.longauto{width:auto!important;}
+.add-info-form .layui-form-mid{padding-left:15px;padding-right:15px;min-width:380px;background-color: rgba(242, 242, 242, 1);border-radius: 4px;}
+.add-info-form .upload-browse{padding-right:60px;height:36px;border:1px solid rgba(0, 153, 255, 1);box-sizing:border-box;border-radius:4px;line-height:36px;}
+.layui-upload-button{border:1px solid transparent;}
+.add-info-form .upload-browse p{overflow:hidden;padding:0 5px;white-space:nowrap;}
+.add-info-form .upload-browse p img{vertical-align:top;margin-top:2px;margin-right:2px;}
+.add-info-form .upload-browse span{position:absolute;top:0;right:0;padding:0 10px;width:40px;background-color: rgba(0, 153, 255, 1);font-size:12px;text-align:center;color:#fff;}
+.add-info-form .layui-btn{width:120px;font-size:16px;}
+.layui-upload-headimg{width:162px!important;height:162px;border:1px solid #ccc;}
+.upload-headimg{width:100%;height:100%;background:url(../images/defaultimg.png) no-repeat;}
+.upload-headimg img{width:100%;height:100%;}
+.yc-upload-text{margin-top:15px;text-align:center;}
+/*审核详情*/
+.check-details{padding:0 20px;font-size:16px;}
+.check-details-one{}
+.lan-tit{margin-right:20px;width:105px;text-align:right;}
+.check-details-one ul li{float:left;margin-top:20px;width:33.33%;}
+.check-details-one ul li span{display:inline-block;margin-right:3%;width:200px;text-align:right;}
+.check-details-two{margin-top:40px;}
+.check-details-two dl{float:left;margin-top:15px;width:33.33%;box-sizing:border-box;}
+.check-details-two dl dt{padding:10px 0;border-top:1px dashed #333;border-bottom:1px dashed #333;}
+.check-details-two dl dt{padding-left:10%;}
+.check-details-two dl dd.area-intext{overflow-y:auto;margin-left:10%;margin-top:15px;padding:10px 2px;box-sizing:border-box;width:60%;border:1px solid #ccc;background-color:#fff;}
+.check-details-two dl dd.area-intext p{padding-bottom:10px;}
+.add-area{display:inline-block;margin-left:20px;padding:0 15px;background-color: rgba(89, 199, 44, 1);border-radius:5px;color: #fff;cursor:pointer;}
+.area-select{margin-left:10%;margin-top:15px;}
+.area-select-top{margin-bottom:10px;}
+.area-select-left,.area-select-right{float:left;}
+.area-select-left{width:190px;}
+.area-select-right{width:120px;}
+
+.check-details-there .goods-img ul li{float:left;margin-right:20px;}
+.goods-img-tips{margin-top:50px;font-size:14px;color:#666;}
+.goods-img-tips-ptop{margin-top:90px;}
+.check-details-four,.check-btnbox{margin-top:20px;}
+.textarea-box,.text-box{width:100%;max-width:800px;background-color:#fff;}
+.check-details .layui-inline{margin-right:30px;}
+.yc-map{width:380px;height:380px;border:1px solid #ccc;background-color:#ddd;}
+
+.check-btnbox{margin-left:130px;}
+.check-details .layui-btn{margin-right:30px;width:200px;border-radius:4px;font-size:16px;}
+.check-details .check-btn1{background-color:#666;}
+/*用户资料*/
+.details-vip{margin-left:5%;padding-top:1%;width:75%;}
+.details-vip ul{display:table-row;}
+.details-vip ul li{display:table-cell;padding:1% 5px 0;width:25%;}
+.details-vip ul li span{display:inline-block;margin-right:5%;width:5em;text-align:right;}
+.details-to-edit{display:block;margin:0 auto;width:180px;height:40px;background-color: rgba(89, 199, 44, 1);border-radius:4px;text-align:center;font-size:16px;line-height:40px;color:#fff;}
+/*相关订单*/
+.box-mar{margin-top:40px;}
+.orders-tit{font-size:20px;font-weight:bold;}
+.orders-tit span{margin-left:20px;font-family: 'Arial Black', 'Arial';color:#C36;}
+.orders-back{margin-top:5px;font-size:14px;}
+.textarea-box .layui-layedit-iframe iframe{height:520px!important;}
+/*仓库产品数量*/
+.store-keep{margin-top:50px;padding-bottom:30px;font-size:18px;}
+.store-keep dl dt,.store-keep dl dd,.store-keep dl dd p{float:left;}
+.store-keep dl dt{font-weight:500}
+.store-keep dl dt span{margin-left:30px;font-weight:bold;color: #C36;}
+.store-keep dl dd{margin-left:30px;}
+.store-keep dl dd p{margin-left:15px;background-color:#666;color:#fff;}
+.store-keep dl dd p a{display:block;padding:2px 30px;color:#fff;}
+/*申请入库*/
+.big-form .layui-form-item .layui-input-inline{float:none;width:auto;}
+/*表格编辑*/
+.edit-table tbody tr td{padding:0;line-height:48px;}
+.edit-table .layui-form-item,
+.edit-table .layui-input-inline{width:100%;height:100%;text-align:left;}
+.edit-table .layui-input-inline input{width:100%;height:48px;border:1px solid transparent;line-height:48px;}
+
+.goods-addbox{padding:20px 0;border:1px solid #ccc;border-top:0;text-align:center;}
+.goods-add{text-decoration:underline;font-size:20px;color: #09F;}
+.go-area{width:60%;}
+.go-area .layui-textarea{height:160px;}
+/*入库审核*/
+.list-item ul li{float:left;margin-top:20px;width:20%;}
+.list-item ul li span{display:inline-block;width:5em;text-align:right;}
+
+/*代理商基本信息*/
+.agent-one{}
+.agent-details-left,.agent-details-right{padding:0 1.5%;}
+.agent-details-left{border-right:1px dashed #333;}
+.agent-details-right{margin-top:23px;}
+.details-table tr td{padding:12px 15px;text-align:left;font-size:16px;}
+.details-table tr:hover{background:none;}
+.agent-details-right>p{margin-left:10px;}
+
+.agent-details-img li{float:left;width:130px;text-align:center;}
+.agent-details-img li p{margin-top:10px;color:#999;}
+.agent-goods-path{margin-bottom:20px;}
+.agent-goods-path h1{font-size:32px;}
+
+/*商品排序*/
+.goods-sort{padding:10px 0;background-color: rgba(242, 242, 242, 1);}
+.goods-sort ul li{float:left;margin:0 15px;font-size:16px;cursor:pointer;}
+/*path-choose*/
+.layui-layer-title{font-size:17px!important;}
+.path-choose-tit{background-color:#fff;}
+.path-choose-tit ul li,.path-choose-area ul{float:left;width:160px;box-sizing:border-box;font-size:16px;}
+.path-choose-tit ul li{padding:10px;}
+.path-choose-tit ul li{font-weight:500;}
+.path-choose-box{width:650px;}
+.path-choose-area{height:400px;border:1px solid #f3f2f2;box-sizing:border-box;}
+.path-choose-area ul{overflow-y:scroll;height:400px;}
+.path-choose-area ul li{padding:2px 10px;}
+.path-choose-area ul li:hover,.path-choose-area ul li.on{background-color:#ddd;}
+/*树形菜单*/
+.ctree{overflow:auto;width:100%;height:200px;background-color:#fff;border:1px solid #ccc;box-sizing: border-box;position:absolute;}
+/*订单*/
+.order-table tr:hover{background:none;}
+.order-table tr td:hover{background-color:#f8f8f8;}
+.order-table th{background-color:#f2f2f2;border: 1px solid #ccc;font-weight:normal;text-align:center;}
+.totel-price{background-color:#f2f2f2;}
+.totel-price .price-left{margin-left:10px;}
+.totel-price .price-all{padding-left:5%;width:250px;background-color:#fff;}
+.totel-price .price-all ul li span{float:right;display:inline-block;width:150px;text-align:right;}
+.totel-price .price-all ul li.last{color:#c36;}
+.totel-price .price-all ul li.last span{font-weight:bold;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>订单管理-详情</title>
+	<meta name="keywords" content="">
+    <meta name="description" content="">
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" type="text/css" href="layui/css/layui.css" />
+    <link rel="stylesheet" type="text/css" href="css/icons.css" />
+    <link rel="stylesheet" type="text/css" href="css/index.css" />
+</head>
+<body>
+<div class="header clearfix">
+	<div class="logo fl">
+		<a href="/">
+			<img src="images/logo.png" alt="">
+			<h1>优产到家后台管理系统</h1>
+			<p>EXCELLENT HOME BACKGROUND MANAGEMENT SYSTEM</p>
+		</a>
+	</div>
+	<div class="login-user fr clearfix">
+		<a href="/" class="user-admin"><i class="icons icon-w40 ico-user"></i>admin</a>
+		<a href="login.html" class="user-login-out"><i class="icons icon-w40 ico-login-out"></i>退出</a>
+	</div>
+</div>
+<div class="content">
+	<!-- 导航 -->
+	<div class="nav-con fl">
+		<ul class="layui-nav layui-nav-tree" lay-filter="NavCon">
+			<li class="layui-nav-item">
+				<a href="index.html"><i class="icons icon-w24 ico-home"></i>首页</a>				
+			</li>
+			<li class="layui-nav-item">
+				<a href="javascript:;"><i class="icons icon-w24 ico-storage"></i>仓储</a>
+				<dl class="layui-nav-child">
+					<dd><a href="store-management.html">仓库管理</a></dd>
+					<dd><a href="store-instore.html">入库</a></dd>
+					<dd><a href="store-outstore.html">出库</a></dd>
+					<dd><a href="store-keepcheck.html">库存盘点</a></dd>
+				</dl>
+			</li>
+			<li class="layui-nav-item">
+				<a href="user-management.html"><i class="icons icon-w24 ico-users"></i>用户</a>				
+			</li>
+			<li class="layui-nav-item">
+				<a href="javascript:;"><i class="icons icon-w24 ico-agent"></i>代理商</a>
+				<dl class="layui-nav-child">
+					<dd><a href="agent-management.html">代理商管理</a></dd>
+					<dd><a href="agent-audit.html">代理商审核</a></dd>					
+				</dl>
+			</li>
+			<li class="layui-nav-item">
+				<a href="javascript:;"><i class="icons icon-w24 ico-terminal-shop"></i>终端店</a>
+				<dl class="layui-nav-child">
+					<dd><a href="terminal-management.html">终端店管理</a></dd>
+					<dd><a href="terminal-audit.html">终端店审核</a></dd>					
+				</dl>
+			</li>
+			<li class="layui-nav-item">
+				<a href="javascript:;"><i class="icons icon-w24 ico-goods"></i>商品</a>
+				<dl class="layui-nav-child">
+					<dd><a href="goods-management-classify.html">分类管理</a></dd>
+					<dd><a href="goods-management-brand.html">品牌管理</a></dd>
+					<dd><a href="goods-management.html">商品管理</a></dd>					
+				</dl>
+			</li>
+			<li class="layui-nav-item">
+				<a href="order-management.html"><i class="icons icon-w24 ico-order"></i>订单</a>
+			</li>
+			<li class="layui-nav-item">
+				<a href=""><i class="icons icon-w24 ico-after-sale"></i>售后</a>
+			</li>
+			<li class="layui-nav-item">
+				<a href="javascript:;"><i class="icons icon-w24 ico-details"></i>内容</a>
+				<dl class="layui-nav-child">
+					<dd><a href="details-management.html">广告管理</a></dd>
+					<dd><a href="details-advertising.html">广告位管理</a></dd>
+					<dd><a href="details-article.html">文章管理</a></dd>
+					<dd><a href="details-app.html">APP启动页</a></dd>
+					<dd><a href="details-system.html">系统公告</a></dd>
+					<dd><a href="details-comments.html">评论管理</a></dd>	
+					<dd><a href="details-user-opinion.html">app用户意见与反馈</a></dd>	
+					<dd><a href="details-user-deal.html">用户协议</a></dd>					
+				</dl>
+			</li>
+			<li class="layui-nav-item">
+				<a href=""><i class="icons icon-w24 ico-operation"></i>运营/促销</a>
+			</li>
+			<li class="layui-nav-item">
+				<a href="javascript:;"><i class="icons icon-w24 ico-settlement"></i>结算</a>
+				<dl class="layui-nav-child">
+					<dd><a href="settlement.html">结算单管理</a></dd>
+					<dd><a href="settlement-online.html">线上结算</a></dd>					
+				</dl>
+			</li>
+			<li class="layui-nav-item">
+				<a href=""><i class="icons icon-w24 ico-statistical"></i>统计</a>
+			</li>
+			<li class="layui-nav-item">
+				<a href=""><i class="icons icon-w24 ico-system"></i>系统管理</a>
+			</li>
+		</ul>
+	</div>
+	<!-- content -->
+	<div class="content-con fl">
+		<!-- 订单管理-详情 -->
+		<div class="bg-white content-padding">
+			<!-- 详情 -->
+			<div class="check-details clearfix">
+				<div class="clearfix">
+					<h3 class="orders-tit">订单详情<a class="orders-back fr" href="order-management.html">返回列表</a></h3>
+					
+					<div class="sline"></div>
+					<!-- 订单信息 -->
+					<div class="agent-two clearfix">
+						<p>订单信息</p>
+						<table class="layui-table order-table">
+							<tr>
+								<th>订单号</th>
+								<td>1321215151215215551</td>							
+								<th>下单时间</th>
+								<td>2017-06-23  00:00:00</td>							
+								<th>订单状态</th>
+								<td><span class="blue">已完成</span></td>
+								<th>买家</th>
+								<td>用户名</td>
+							</tr>
+							<tr>
+								<th>订单金额（元）</th>
+								<td><span class="firebrick">96.90</span></td>
+								<th>支付金额（元）</th>
+								<td><span class="firebrick">66.90</span></td>
+								<th>优惠（元）</th>
+								<td><span class="firebrick">30.00</span></td>
+								<th>配送方式</th>
+								<td>快递</td>
+							</tr>
+							<tr>
+								<th>运费（元）</th>
+								<td>0.00</td>							
+								<th>支付状态</th>
+								<td>已支付</td>							
+								<th>支付方式</th>
+								<td>微信支付</td>
+								<th>支付时间</th>
+								<td>2017-06-23  00:00:00</td>
+							</tr>
+						</table>
+					</div>
+					<!-- 配送信息 -->
+					<div class="check-details-two clearfix">
+						<p>配送信息</p>
+						<table class="layui-table order-table">
+							<tr>
+								<th>配送方式</th>
+								<td>快递</td>							
+								<th>配送费（元）</th>
+								<td>10.00</td>							
+								<th>收货人</th>
+								<td>张三</td>
+								<th>电话</th>
+								<td>13000000000</td>
+							</tr>
+							<tr>
+								<th>收货地址</th>
+								<td>四川省成都市锦江区三色路163号 银海芯座B座701</td>
+								<th></th>
+								<td></td>
+								<th></th>
+								<td></td>
+								<th></th>
+								<td></td>
+							</tr>
+							
+						</table>
+					</div>
+					<!-- 商品信息 -->
+					<div class="check-details-two clearfix">
+						<p>商品信息</p>
+						<table class="layui-table order-table">
+							<thead>
+								<tr>
+									<th>商品信息</th>
+									<th>规格</th>
+									<th>单价（元）</th>
+									<th>数量</th>
+									<th>商品金额（元）</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td><img width="60" height="60" src="images/defaultimg.png">&nbsp;&nbsp;首翠珍珠米5kg</td>
+									<td>5kg</td>
+									<td>39.80</td>
+									<td>2</td>
+									<td>79.60</td>
+								</tr>
+								<tr>
+									<td><img width="60" height="60" src="images/defaultimg.png">&nbsp;&nbsp;首翠珍珠米5kg</td>
+									<td>5kg</td>
+									<td>39.80</td>
+									<td>2</td>
+									<td>79.60</td>
+								</tr>
+								<tr>
+									<td><img width="60" height="60" src="images/defaultimg.png">&nbsp;&nbsp;首翠珍珠米5kg</td>
+									<td>5kg</td>
+									<td>39.80</td>
+									<td>2</td>
+									<td>79.60</td>
+								</tr>								
+							</tbody>
+						</table>
+					</div>
+					<!-- 计算金额 -->
+					<div class="totel-price clearfix">
+						<div class="price-left fl">
+							<ul>
+								<li>&nbsp;</li>
+								<li>优惠信息：满90元立减30元</li>
+								<li>&nbsp;</li>
+							</ul>
+						</div>
+						<div class="price-all fr">
+							<ul>
+								<li>合计金额：<span>￥96.90</span></li>
+								<li>优惠：<span>-￥30.00</span></li>
+								<li class="last">实付金额：<span>￥66.90</span></li>
+							</ul>
+						</div>
+					</div>
+					<div class="check-details-two clearfix">
+						<p>备注：。。。。。。。。。。。。。。。。。</p>
+					</div>
+				</div>
+			</div>
+			<!-- 详情 -->
+		</div>
+		<!-- 订单管理-详情 -->
+	</div>
+</div>
+
+
+</body>
+<script src="js/jquery-1.12.4.min.js"></script>
+<script src="layui/layui.js"></script>
+<script src="js/index.js"></script>
+<script>
+	
+   
+
+</script>
+</html>

@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>商品管理-审核详情</title>
+	<meta name="keywords" content="">
+    <meta name="description" content="">
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" type="text/css" href="layui/css/layui.css" />
+    <link rel="stylesheet" type="text/css" href="css/icons.css" />
+    <link rel="stylesheet" type="text/css" href="css/index.css" />
+</head>
+<body>
+<div class="header clearfix">
+	<div class="logo fl">
+		<a href="/">
+			<img src="images/logo.png" alt="">
+			<h1>优产到家后台管理系统</h1>
+			<p>EXCELLENT HOME BACKGROUND MANAGEMENT SYSTEM</p>
+		</a>
+	</div>
+	<div class="login-user fr clearfix">
+		<a href="/" class="user-admin"><i class="icons icon-w40 ico-user"></i>admin</a>
+		<a href="login.html" class="user-login-out"><i class="icons icon-w40 ico-login-out"></i>退出</a>
+	</div>
+</div>
+<div class="content">
+	<!-- 导航 -->
+	<div class="nav-con fl">
+		<ul class="layui-nav layui-nav-tree" lay-filter="NavCon">
+			<li class="layui-nav-item">
+				<a href="index.html"><i class="icons icon-w24 ico-home"></i>首页</a>				
+			</li>
+			<li class="layui-nav-item">
+				<a href="javascript:;"><i class="icons icon-w24 ico-storage"></i>仓储</a>
+				<dl class="layui-nav-child">
+					<dd><a href="store-management.html">仓库管理</a></dd>
+					<dd><a href="store-instore.html">入库</a></dd>
+					<dd><a href="store-outstore.html">出库</a></dd>
+					<dd><a href="store-keepcheck.html">库存盘点</a></dd>
+				</dl>
+			</li>
+			<li class="layui-nav-item">
+				<a href="user-management.html"><i class="icons icon-w24 ico-users"></i>用户</a>				
+			</li>
+			<li class="layui-nav-item">
+				<a href="javascript:;"><i class="icons icon-w24 ico-agent"></i>代理商</a>
+				<dl class="layui-nav-child">
+					<dd><a href="agent-management.html">代理商管理</a></dd>
+					<dd><a href="agent-audit.html">代理商审核</a></dd>					
+				</dl>
+			</li>
+			<li class="layui-nav-item">
+				<a href="javascript:;"><i class="icons icon-w24 ico-terminal-shop"></i>终端店</a>
+				<dl class="layui-nav-child">
+					<dd><a href="terminal-management.html">终端店管理</a></dd>
+					<dd><a href="terminal-audit.html">终端店审核</a></dd>					
+				</dl>
+			</li>
+			<li class="layui-nav-item">
+				<a href="javascript:;"><i class="icons icon-w24 ico-goods"></i>商品</a>
+				<dl class="layui-nav-child">
+					<dd><a href="goods-management-classify.html">分类管理</a></dd>
+					<dd><a href="goods-management-brand.html">品牌管理</a></dd>
+					<dd><a href="goods-management.html">商品管理</a></dd>					
+				</dl>
+			</li>
+			<li class="layui-nav-item">
+				<a href="order-management.html"><i class="icons icon-w24 ico-order"></i>订单</a>
+			</li>
+			<li class="layui-nav-item">
+				<a href=""><i class="icons icon-w24 ico-after-sale"></i>售后</a>
+			</li>
+			<li class="layui-nav-item">
+				<a href="javascript:;"><i class="icons icon-w24 ico-details"></i>内容</a>
+				<dl class="layui-nav-child">
+					<dd><a href="details-management.html">广告管理</a></dd>
+					<dd><a href="details-advertising.html">广告位管理</a></dd>
+					<dd><a href="details-article.html">文章管理</a></dd>
+					<dd><a href="details-app.html">APP启动页</a></dd>
+					<dd><a href="details-system.html">系统公告</a></dd>
+					<dd><a href="details-comments.html">评论管理</a></dd>	
+					<dd><a href="details-user-opinion.html">app用户意见与反馈</a></dd>	
+					<dd><a href="details-user-deal.html">用户协议</a></dd>					
+				</dl>
+			</li>
+			<li class="layui-nav-item">
+				<a href=""><i class="icons icon-w24 ico-operation"></i>运营/促销</a>
+			</li>
+			<li class="layui-nav-item">
+				<a href="javascript:;"><i class="icons icon-w24 ico-settlement"></i>结算</a>
+				<dl class="layui-nav-child">
+					<dd><a href="settlement.html">结算单管理</a></dd>
+					<dd><a href="settlement-online.html">线上结算</a></dd>				
+				</dl>
+			</li>
+			<li class="layui-nav-item">
+				<a href=""><i class="icons icon-w24 ico-statistical"></i>统计</a>
+			</li>
+			<li class="layui-nav-item">
+				<a href=""><i class="icons icon-w24 ico-system"></i>系统管理</a>
+			</li>
+		</ul>
+	</div>
+	<!-- content -->
+	<div class="content-con fl">
+		<!-- 商品管理-审核详情 -->
+		<div class="content-padding">
+			<!-- 切换 -->
+			<div class="sy-tab clearfix">
+				<ul>
+					<li><a href="goods-management.html">所有商品</a></li>
+					<li><a href="goods-management-recycle.html">回收站</a></li>
+					<li><a href="goods-management-checkprices.html">审核商品价格</a></li>
+					<li class="on"><a href="goods-management-check-details.html">详情</a></li>
+				</ul>
+			</div>
+			<!-- 切换 -->
+			<div class="sline"></div>
+			
+			<!-- 审核详情 -->
+			<div class="check-details clearfix">
+				<div class="check-details-one clearfix">
+					<ul>
+						<li><span><em class="red">*</em>商品类别：</span>大米</li>
+						<li><span><em class="red">*</em>品牌：</span>首翠</li>
+						<li><span><em class="red">*</em>商品名称：</span>首翠大米</li>
+						<li><span>规格：</span>5kg</li>
+						<li><span>计量单位：</span>袋</li>
+						<li><span>商品条码：</span></li>
+						<li><span><em class="red">*</em>全国统一出厂价：</span>30.50元</li>
+						<li><span><em class="red">*</em>全国统一代理商发货价：</span>36.50</li>
+						<li><span><em class="red">*</em>全国统一零售价：</span>40.50</li>
+						<li><span>送货上门费用：</span>8元</li>
+					</ul>
+				</div>
+				<div class="check-details-two clearfix">
+					<p>特殊区域价格</p>
+					<div class="clearfix">
+						<dl>
+							<dt>出厂价</dt>
+							<dd class="area-intext">
+								<p><span>四川：</span><span>28元</span></p>
+								<p><span>云南：</span><span>34元</span></p>
+								<p><span>贵州：</span><span>35元</span></p>
+							</dd>
+						</dl>
+						<dl>
+							<dt>代理商发货价</dt>
+							<dd class="area-intext">
+								<p><span>四川：</span><span>28元</span></p>
+								<p><span>云南：</span><span>34元</span></p>
+								<p><span>贵州：</span><span>35元</span></p>
+							</dd>
+						</dl>
+						<dl>
+							<dt>零售价</dt>
+							<dd class="area-intext">
+								<p><span>四川：</span><span>28元</span></p>
+								<p><span>云南：</span><span>34元</span></p>
+								<p><span>贵州：</span><span>35元</span></p>
+							</dd>
+						</dl>
+					</div>					
+				</div>
+				<div class="xline"></div>
+				<div class="check-details-there clearfix">
+					<p class="lan-tit fl"><em class="red">*</em>商品图片：</p>
+					<div class="goods-img fl clearfix">
+						<ul>
+							<li><img width="200" height="160" src="images/defaultimg.png" alt=""></li>
+							<li><img width="200" height="160" src="images/defaultimg.png" alt=""></li>
+							<li><img width="200" height="160" src="images/defaultimg.png" alt=""></li>
+						</ul>
+					</div>
+					<div class="goods-img-tips fl">
+						<p>格式：JPG/PNG</p>
+						<p>尺寸：200x200</p>
+						<p>大小：小于400kb</p>
+					</div>
+				</div>
+				<div class="check-details-four clearfix">
+					<p class="lan-tit fl"><em class="red">*</em>商品详情：</p>
+					<div class="textarea-box fl clearfix">
+						<textarea class="layui-textarea" id="LAY_demo1" style="display: none">把编辑器的初始内容放在这textarea即可</textarea>
+					</div>
+				</div>
+				<div class="check-details-four clearfix">
+					<p class="lan-tit fl"><em class="red">*</em>商品详情：</p>
+					<div class="clearfix">
+						<div class="layui-inline">
+							<input type="radio" id="isUp" name="isUp" checked="">   
+							<label for="isUp">上架</label>  
+						</div>
+						<div class="layui-inline">
+							<input type="radio" id="isDown" name="isUp"> 
+							<label for="isDown">下架</label>    
+						</div>
+					</div>
+				</div>
+				<div class="check-details-four clearfix">
+					<p class="lan-tit fl"><em class="red">*</em>备注：</p>
+					<div class="textarea-box fl clearfix">
+						<textarea class="layui-textarea" placeholder="请输入内容"></textarea>
+					</div>
+				</div>
+				<div class="check-btnbox clearfix">					
+					<button class="layui-btn check-btn" lay-filter="sersub">审核通过</button><button class="layui-btn check-btn1">拒绝</button>
+				</div>
+			</div>
+			
+		</div>
+		<!-- 商品管理-审核详情 -->
+	</div>
+</div>
+
+
+</body>
+<script src="js/jquery-1.12.4.min.js"></script>
+<script src="layui/layui.js"></script>
+<script src="js/index.js"></script>
+<script>
+	
+    layui.use(['form','layer','layedit'],
+    function() {
+    	var form = layui.form(),       
+        layedit = layui.layedit,        
+        layer = layui.layer;
+        
+
+        //构建一个编辑器
+	   
+	    var index=layedit.build('LAY_demo1', {
+		    tool: ['face', 'link', 'unlink', '|', 'left', 'center', 'right']
+		    
+		})
+	    //获取编辑器内容
+		var content=layedit.getContent(index); 
+
+        //监听提交
+        form.on('submit(sersub)',
+        function(data) {
+            var subdata = JSON.stringify(data.field);
+            console.log(subdata);
+            return false;
+        });
+    });
+ 
+   
+</script>
+</html>

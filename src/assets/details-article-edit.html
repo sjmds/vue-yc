@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>文章管理-编辑</title>
+	<meta name="keywords" content="">
+    <meta name="description" content="">
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" type="text/css" href="layui/css/layui.css" />
+    <link rel="stylesheet" type="text/css" href="css/icons.css" />
+    <link rel="stylesheet" type="text/css" href="css/index.css" />
+</head>
+<body>
+<div class="header clearfix">
+	<div class="logo fl">
+		<a href="/">
+			<img src="images/logo.png" alt="">
+			<h1>优产到家后台管理系统</h1>
+			<p>EXCELLENT HOME BACKGROUND MANAGEMENT SYSTEM</p>
+		</a>
+	</div>
+	<div class="login-user fr clearfix">
+		<a href="/" class="user-admin"><i class="icons icon-w40 ico-user"></i>admin</a>
+		<a href="login.html" class="user-login-out"><i class="icons icon-w40 ico-login-out"></i>退出</a>
+	</div>
+</div>
+<div class="content">
+	<!-- 导航 -->
+	<div class="nav-con fl">
+		<ul class="layui-nav layui-nav-tree" lay-filter="NavCon">
+			<li class="layui-nav-item">
+				<a href="index.html"><i class="icons icon-w24 ico-home"></i>首页</a>				
+			</li>
+			<li class="layui-nav-item">
+				<a href="javascript:;"><i class="icons icon-w24 ico-storage"></i>仓储</a>
+				<dl class="layui-nav-child">
+					<dd><a href="store-management.html">仓库管理</a></dd>
+					<dd><a href="store-instore.html">入库</a></dd>
+					<dd><a href="store-outstore.html">出库</a></dd>
+					<dd><a href="store-keepcheck.html">库存盘点</a></dd>
+				</dl>
+			</li>
+			<li class="layui-nav-item">
+				<a href="user-management.html"><i class="icons icon-w24 ico-users"></i>用户</a>				
+			</li>
+			<li class="layui-nav-item">
+				<a href="javascript:;"><i class="icons icon-w24 ico-agent"></i>代理商</a>
+				<dl class="layui-nav-child">
+					<dd><a href="agent-management.html">代理商管理</a></dd>
+					<dd><a href="agent-audit.html">代理商审核</a></dd>					
+				</dl>
+			</li>
+			<li class="layui-nav-item">
+				<a href="javascript:;"><i class="icons icon-w24 ico-terminal-shop"></i>终端店</a>
+				<dl class="layui-nav-child">
+					<dd><a href="terminal-management.html">终端店管理</a></dd>
+					<dd><a href="terminal-audit.html">终端店审核</a></dd>					
+				</dl>
+			</li>
+			<li class="layui-nav-item">
+				<a href="javascript:;"><i class="icons icon-w24 ico-goods"></i>商品</a>
+				<dl class="layui-nav-child">
+					<dd><a href="goods-management-classify.html">分类管理</a></dd>
+					<dd><a href="goods-management-brand.html">品牌管理</a></dd>
+					<dd><a href="goods-management.html">商品管理</a></dd>				
+				</dl>
+			</li>
+			<li class="layui-nav-item">
+				<a href="order-management.html"><i class="icons icon-w24 ico-order"></i>订单</a>
+			</li>
+			<li class="layui-nav-item">
+				<a href=""><i class="icons icon-w24 ico-after-sale"></i>售后</a>
+			</li>
+			<li class="layui-nav-item">
+				<a href="javascript:;"><i class="icons icon-w24 ico-details"></i>内容</a>
+				<dl class="layui-nav-child">
+					<dd><a href="details-management.html">广告管理</a></dd>
+					<dd><a href="details-advertising.html">广告位管理</a></dd>
+					<dd><a href="details-article.html">文章管理</a></dd>
+					<dd><a href="details-app.html">APP启动页</a></dd>
+					<dd><a href="details-system.html">系统公告</a></dd>
+					<dd><a href="details-comments.html">评论管理</a></dd>	
+					<dd><a href="details-user-opinion.html">app用户意见与反馈</a></dd>	
+					<dd><a href="details-user-deal.html">用户协议</a></dd>					
+				</dl>
+			</li>
+			<li class="layui-nav-item">
+				<a href=""><i class="icons icon-w24 ico-operation"></i>运营/促销</a>
+			</li>
+			<li class="layui-nav-item">
+				<a href="javascript:;"><i class="icons icon-w24 ico-settlement"></i>结算</a>
+				<dl class="layui-nav-child">
+					<dd><a href="settlement.html">结算单管理</a></dd>
+					<dd><a href="settlement-online.html">线上结算</a></dd>				
+				</dl>
+			</li>
+			<li class="layui-nav-item">
+				<a href=""><i class="icons icon-w24 ico-statistical"></i>统计</a>
+			</li>
+			<li class="layui-nav-item">
+				<a href=""><i class="icons icon-w24 ico-system"></i>系统管理</a>
+			</li>
+		</ul>
+	</div>
+	<!-- content -->
+	<div class="content-con fl">
+		<!-- 文章管理-编辑 -->
+		<div class="bg-white content-padding">
+			<!-- 切换 -->
+			<div class="sy-tab clearfix">
+				<ul>
+					
+					<li class="on"><a href="details-article-add.html">编辑文章</a></li>
+					
+				</ul>
+			</div>
+			<!-- 切换 -->
+			<div class="sline"></div>
+			
+			<!-- 编辑 -->
+			<div class="add-info-form clearfix">
+				<form class="layui-form" action="">
+					<div class="layui-form-item">
+				    	<label class="layui-form-label"><em class="red">*</em>文章标题：</label>
+				    	<div class="layui-input-inline">
+				      		<input type="text" name="title" lay-verify="required" autocomplete="off" placeholder="文章标题" class="layui-input">
+				    	</div>
+				    </div>
+				   
+				    <div class="layui-form-item">
+				    	<label class="layui-form-label"><em class="red">*</em>文章分类：</label>
+				    	<div class="layui-input-inline">
+							<select name="interest" lay-verify="required" lay-filter="aihao">	
+						        <option value="0">健康生活小知识</option>
+						        <option value="1">店主之间</option>
+						    </select>
+				    	</div>
+				    </div>
+				    <div class="layui-form-item">
+				    	<label class="layui-form-label"><em class="red">*</em>URL类型：</label>
+				    	<div class="layui-input-inline">
+							<select name="urlTye" lay-verify="required"  lay-filter="URLChoose">	
+						        <option value="0">文章链接</option>
+						        <option value="1">商品链接</option>
+						        <option value="2">XX链接</option>
+						    </select>
+				    	</div>
+				    </div>
+				    <div class="layui-form-item">
+				    	<label class="layui-form-label">外部URL：</label>
+				    	<div class="layui-input-inline">
+				      		<input type="text" name="website" lay-verify="url" autocomplete="off" placeholder="如：http://www.baidu.com" class="layui-input" id="website">
+				    	</div>
+				    	<div class="layui-form-mid layui-word-aux">填写URL后，该文章链接会直接跳转到对应的URL，URL以http://开头</div>
+				    </div>
+				    <div class="layui-form-item">
+					    <label class="layui-form-label">外部URL：</label>
+					    <div class="layui-input-block">
+					       <input type="checkbox" checked="" name="open" lay-skin="switch" lay-filter="switchTest" lay-text="ON|OFF">
+					    </div>
+					</div>
+					<div class="layui-form-item">
+				    	<label class="layui-form-label">标志：</label>
+				    	<div class="layui-input-inline">
+				      		<input type="text" name="" autocomplete="off" placeholder="标志" class="layui-input">
+				    	</div>
+				    </div>
+				    <div class="layui-form-item">
+				    	<label class="layui-form-label">序号：</label>
+				    	<div class="layui-input-inline">
+				      		<input type="number" name="" min="0" autocomplete="off" placeholder="序号" class="layui-input">
+				    	</div>
+				    </div>
+				    <div class="layui-form-item">
+				    	<label class="layui-form-label"><em class="red">*</em>内容：</label>
+						<div class="textarea-box fl">
+							<textarea class="layui-textarea" id="LAY_demo1" style="display: none;height:500px;"></textarea>
+						</div>
+				    </div>
+				    <div class="layui-form-item">
+				    	<label class="layui-form-label">备注：</label>
+						<div class="layui-input-inline">
+							<input type="text" placeholder="备注" class="layui-input">
+						</div>
+				    </div>
+				    <div class="layui-form-item">
+						<div class="layui-input-block">
+							<button class="layui-btn" lay-submit="" lay-filter="addInfo">提交</button>
+							<!-- <button type="reset" class="layui-btn layui-btn-primary" lay-reset="" lay-filter="cancelInfo">取消</button> -->
+							<a class="layui-btn layui-btn-primary" href="details-article.html">取消</a>
+						</div>
+					</div>
+				</form>
+			</div>
+			<!-- 编辑 -->
+			
+		</div>
+		<!-- 文章管理-编辑 -->
+	</div>
+</div>
+<div class="path-choose-box" style="display:none">
+				<div class="path-choose-tit clearfix">
+					<ul>
+						<li>商品类别1</li>
+						<li>商品类别2</li>
+						<li>商品类别3</li>
+					</ul>
+				</div>
+				<div class="path-choose-area clearfix">
+					<ul>
+						<!-- <li class="on" id="1">a1</li>
+						
+						<li>a2</li>
+						<li>a3</li>
+						<li>a4</li> -->
+					</ul>
+					<ul>
+						<!-- <li class="on">b1</li>
+						<li>b2</li>
+						<li>b3</li>
+						<li>b4</li> -->
+						
+					</ul>
+					<ul>
+						<!-- <li class="on">c1</li>
+						<li>c2</li>
+						<li>c3</li>
+						<li>c4</li>
+						<li>c5</li>
+						<li>c6</li> -->
+						
+					</ul>
+				</div>
+			</div>
+
+</body>
+<script src="js/jquery-1.12.4.min.js"></script>
+<script src="layui/layui.js"></script>
+<script src="js/index.js"></script>
+<script>
+	
+    layui.use(['form','layer','layedit'],
+    function() {
+    	var form = layui.form(),        
+        layer = layui.layer,
+        layedit = layui.layedit;
+        
+        
+		//监听指定开关
+		form.on('switch(switchTest)', function(data){
+			//this.checked ? 'true' : 'false'
+			if(this.checked){
+				$('#website').removeAttr('disabled');
+				$('#website').attr('lay-verify','url');
+				
+			}else{
+				$('#website').attr('disabled','true');
+				$('#website').removeAttr('lay-verify');
+			}
+		});
+		//自定义工具栏
+		var index=layedit.build('LAY_demo1', {
+			tool: ['face', 'link', 'unlink', '|', 'left', 'center', 'right']
+			,height: 100
+		})
+		//编辑器内容
+		var content=layedit.getContent(index);
+		//选择URL
+        form.on('select(URLChoose)', function(data){
+			var val=parseInt(data.value);
+			switch(val){
+				//商品链接
+				case 1:					
+					openWin();
+					break;
+				
+			};
+		});
+		//
+		var data1=[
+			{"id":"1","text":"a1"},
+			{"id":"2","text":"a2"},
+			{"id":"3","text":"a3"},
+			{"id":"4","text":"a4"},
+			{"id":"5","text":"a5"},
+			{"id":"6","text":"a6"},
+			{"id":"7","text":"a7"}
+		];
+		var data2=[
+			{"id":"11","text":"b1"},
+			{"id":"12","text":"b2"},
+			{"id":"13","text":"b3"},
+			{"id":"14","text":"b4"},
+			{"id":"15","text":"b5"},
+			{"id":"16","text":"b6"},
+			{"id":"17","text":"b7"}
+		];
+		var data3=[
+			{"id":"21","text":"c1"},
+			{"id":"22","text":"c2"},
+			{"id":"23","text":"c3"},
+			{"id":"24","text":"c4"},
+			{"id":"25","text":"c5"},
+			{"id":"26","text":"c6"},
+			{"id":"27","text":"c7"}
+		];
+		//数据模板
+		function liRender(data){
+			var datastr="";
+			for(var i=0;i<data.length;i++){
+				datastr+="<li id="+data[i].id+">"+data[i].text+"</li>";
+			}
+			return datastr;
+		}
+		//获取元素
+		var pCArea=$('.path-choose-area ul');
+		pCArea.eq(0).html(liRender(data1));
+		pCArea.eq(1).html(liRender(data2));
+		pCArea.eq(2).html(liRender(data3));
+		//pCArea
+		pCArea.on('click','li',function(){
+			alert(this.id)
+			layer.close(index);
+		})
+
+		var index;
+        //弹出窗口
+        function openWin(){
+        	index = layer.open({
+				type:1,
+				title:'请选择商品类别',
+				btn:['确定','取消'],
+				area: ['500px', '400px'],
+				content: $('.path-choose-box'),
+				yes:function(index){
+					alert('123')
+					layer.close(index);
+				}
+			});
+        };
+        //监听提交
+        form.on('submit(addInfo)',
+        function(data) {
+            var subdata = JSON.stringify(data.field);
+            console.log(subdata);
+            return false;
+        });
+
+    });
+    
+	
+    
+</script>
+</html>

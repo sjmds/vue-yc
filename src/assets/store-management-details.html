@@ -1,0 +1,273 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>仓库管理-详情</title>
+	<meta name="keywords" content="">
+    <meta name="description" content="">
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" type="text/css" href="layui/css/layui.css" />
+    <link rel="stylesheet" type="text/css" href="css/icons.css" />
+    <link rel="stylesheet" type="text/css" href="css/index.css" />
+</head>
+<body>
+<div class="header clearfix">
+	<div class="logo fl">
+		<a href="/">
+			<img src="images/logo.png" alt="">
+			<h1>优产到家后台管理系统</h1>
+			<p>EXCELLENT HOME BACKGROUND MANAGEMENT SYSTEM</p>
+		</a>
+	</div>
+	<div class="login-user fr clearfix">
+		<a href="/" class="user-admin"><i class="icons icon-w40 ico-user"></i>admin</a>
+		<a href="login.html" class="user-login-out"><i class="icons icon-w40 ico-login-out"></i>退出</a>
+	</div>
+</div>
+<div class="content">
+	<!-- 导航 -->
+	<div class="nav-con fl">
+		<ul class="layui-nav layui-nav-tree" lay-filter="NavCon">
+			<li class="layui-nav-item">
+				<a href="index.html"><i class="icons icon-w24 ico-home"></i>首页</a>				
+			</li>
+			<li class="layui-nav-item">
+				<a href="javascript:;"><i class="icons icon-w24 ico-storage"></i>仓储</a>
+				<dl class="layui-nav-child">
+					<dd class="layui-this"><a href="store-management.html">仓库管理</a></dd>
+					<dd><a href="store-instore.html">入库</a></dd>
+					<dd><a href="store-outstore.html">出库</a></dd>
+					<dd><a href="store-keepcheck.html">库存盘点</a></dd>
+				</dl>
+			</li>
+			<li class="layui-nav-item">
+				<a href="user-management.html"><i class="icons icon-w24 ico-users"></i>用户</a>				
+			</li>
+			<li class="layui-nav-item">
+				<a href="javascript:;"><i class="icons icon-w24 ico-agent"></i>代理商</a>
+				<dl class="layui-nav-child">
+					<dd><a href="agent-management.html">代理商管理</a></dd>
+					<dd><a href="agent-audit.html">代理商审核</a></dd>					
+				</dl>
+			</li>
+			<li class="layui-nav-item">
+				<a href="javascript:;"><i class="icons icon-w24 ico-terminal-shop"></i>终端店</a>
+				<dl class="layui-nav-child">
+					<dd><a href="terminal-management.html">终端店管理</a></dd>
+					<dd><a href="terminal-audit.html">终端店审核</a></dd>					
+				</dl>
+			</li>
+			<li class="layui-nav-item">
+				<a href="javascript:;"><i class="icons icon-w24 ico-goods"></i>商品</a>
+				<dl class="layui-nav-child">
+					<dd><a href="goods-management-classify.html">分类管理</a></dd>
+					<dd><a href="goods-management-brand.html">品牌管理</a></dd>
+					<dd><a href="goods-management.html">商品管理</a></dd>				
+				</dl>
+			</li>
+			<li class="layui-nav-item">
+				<a href="order-management.html"><i class="icons icon-w24 ico-order"></i>订单</a>
+			</li>
+			<li class="layui-nav-item">
+				<a href=""><i class="icons icon-w24 ico-after-sale"></i>售后</a>
+			</li>
+			<li class="layui-nav-item">
+				<a href="javascript:;"><i class="icons icon-w24 ico-details"></i>内容</a>
+				<dl class="layui-nav-child">
+					<dd><a href="details-management.html">广告管理</a></dd>
+					<dd><a href="details-advertising.html">广告位管理</a></dd>
+					<dd><a href="details-article.html">文章管理</a></dd>
+					<dd><a href="details-app.html">APP启动页</a></dd>
+					<dd><a href="details-system.html">系统公告</a></dd>
+					<dd><a href="details-comments.html">评论管理</a></dd>	
+					<dd><a href="details-user-opinion.html">app用户意见与反馈</a></dd>	
+					<dd><a href="details-user-deal.html">用户协议</a></dd>					
+				</dl>
+			</li>
+			<li class="layui-nav-item">
+				<a href=""><i class="icons icon-w24 ico-operation"></i>运营/促销</a>
+			</li>
+			<li class="layui-nav-item">
+				<a href="javascript:;"><i class="icons icon-w24 ico-settlement"></i>结算</a>
+				<dl class="layui-nav-child">
+					<dd><a href="settlement.html">结算单管理</a></dd>
+					<dd><a href="settlement-online.html">线上结算</a></dd>					
+				</dl>
+			</li>
+			<li class="layui-nav-item">
+				<a href=""><i class="icons icon-w24 ico-statistical"></i>统计</a>
+			</li>
+			<li class="layui-nav-item">
+				<a href=""><i class="icons icon-w24 ico-system"></i>系统管理</a>
+			</li>
+		</ul>
+	</div>
+	<!-- content -->
+	<div class="content-con fl">
+		<!-- 仓库管理-详情 -->
+		<div class="bg-white content-padding">
+			<!-- 切换 -->
+			<div class="sy-tab clearfix">
+				<ul>
+					<li><a href="store-management.html">仓库管理</a></li>
+					<li><a href="store-management-add.html">新增</a></li>
+					<li class="on"><a href="store-management-details.html">详情</a></li>
+				</ul>
+			</div>
+			<!-- 切换 -->
+			<div class="sline"></div>
+			
+			<!-- 详情 -->
+			<div class="add-info-form clearfix">
+				<form class="layui-form" action="">
+					<div class="layui-form-item">
+				    	<label class="layui-form-label">仓库编号：</label>
+				    	<div class="layui-input-inline">
+				      		<input type="text" name="serialNumber" autocomplete="off" placeholder="请输入仓库编号" class="layui-input">
+				    	</div>
+				    </div>
+				    <div class="layui-form-item">
+				    	<label class="layui-form-label">仓库名称：</label>
+				    	<div class="layui-input-inline">
+				      		<input type="text" name="title" autocomplete="off" placeholder="请输入仓库名称" class="layui-input">
+				    	</div>
+				    </div>
+				    <div class="layui-form-item">
+				    	<label class="layui-form-label">仓库类型：</label>
+				    	<div class="layui-input-inline">
+				      		<select name="modules">
+					        	<option>请选择仓库类型</option>
+					            <option>米面油</option>
+					            <option>休闲食品</option>
+					            <option>统仓</option>					          
+					        </select>
+				    	</div>
+				    </div>
+				    <div class="layui-form-item">
+				    	<label class="layui-form-label">仓库负责人：</label>
+				    	<div class="layui-input-inline">
+				      		<input type="text" name="name" autocomplete="off" placeholder="请输入仓库负责人" class="layui-input">
+				    	</div>
+				    </div>
+				    <div class="layui-form-item">
+				    	<label class="layui-form-label">联系电话：</label>
+				    	<div class="layui-input-inline">
+				      		<input type="tel" name="title" lay-verify="phone" autocomplete="off" placeholder="请输入负责人手机号" class="layui-input">
+				    	</div>
+				    </div>
+				    <div class="layui-form-item">
+				    	<label class="layui-form-label">仓库面积（m²）：</label>
+				    	<div class="layui-input-inline">
+				      		<input type="text" name="name" autocomplete="off" placeholder="请填写仓库面积" class="layui-input">
+				    	</div>
+				    </div>
+				    <div class="layui-form-item">
+				    	<label class="layui-form-label">容量（吨）：</label>
+				    	<div class="layui-input-inline">
+				      		<input type="text" name="name" autocomplete="off" placeholder="请填写仓库容量" class="layui-input">
+				    	</div>
+				    </div>
+					<div class="layui-form-item">
+						<label class="layui-form-label">仓库地址：</label>
+						<div class="layui-input-inline">
+							<select name="quiz1">
+								<option value="">请选择省</option>
+								<option value="浙江">浙江省</option>
+								<option value="你的工号">江西省</option>
+								<option value="你最喜欢的老师">福建省</option>
+							</select>
+						</div>
+						<div class="layui-input-inline">
+							<select name="quiz2">
+								<option value="">请选择市</option>
+								<option value="杭州">杭州</option>
+								<option value="宁波">宁波</option>
+								<option value="温州">温州</option>
+								<option value="温州">台州</option>
+								<option value="温州">绍兴</option>
+							</select>
+						</div>
+						<div class="layui-input-inline">
+							<select name="quiz3">
+								<option value="">请选择县/区</option>
+								<option value="西湖区">西湖区</option>
+								<option value="余杭区">余杭区</option>
+								<option value="拱墅区">临安市</option>
+							</select>
+						</div>						
+					</div>
+					<div class="layui-form-item">
+						<label class="layui-form-label"></label>
+						<div class="layui-input-inline longer">
+							<input type="text" name="quiz4" placeholder="请输入详细地址" class="layui-input">
+						</div>
+					</div>
+				    <div class="layui-form-item">
+				    	<label class="layui-form-label">状态：</label>
+				    	<div class="layui-input-inline">
+							<input type="radio" name="using" value="启用" title="启用" checked="">
+						    <input type="radio" name="using" value="停用" title="停用">
+				    	</div>
+				    </div>
+				    <div class="layui-form-item">
+				    	<label class="layui-form-label">备注：</label>
+						<div class="layui-input-inline">
+							<input type="text" placeholder="备注" class="layui-input">
+						</div>
+				    </div>
+				    <div class="layui-form-item">
+						<div class="layui-input-block">
+							<button class="layui-btn" lay-submit="" lay-filter="addInfo">保存</button>
+							<!-- <button type="reset" class="layui-btn layui-btn-primary" lay-reset="" lay-filter="cancelInfo">取消</button> -->
+							<a class="layui-btn layui-btn-primary" href="store-management.html">取消</a>
+						</div>
+					</div>
+				</form>
+			</div>
+			<!-- 详情 -->
+			<div class="xline"></div>
+			<!-- 仓库数量 -->
+			<div class="store-keep clearfix">
+				<dl>
+					<dt>仓库产品数量：<span>2310</span></dt>
+					<dd>
+						<p><a href="">入库</a></p>
+						<p><a href="">出库</a></p>
+						<p><a href="">盘点</a></p>
+					</dd>
+				</dl>
+			</div>
+		</div>
+		<!-- 仓库管理-详情 -->
+	</div>
+</div>
+
+
+</body>
+<script src="js/jquery-1.12.4.min.js"></script>
+<script src="layui/layui.js"></script>
+<script src="js/index.js"></script>
+<script>
+	
+    layui.use(['form', 'layer'],
+    function() {
+    	var form = layui.form(),        
+        layer = layui.layer;
+        
+        
+        //监听提交
+        form.on('submit(addInfo)',
+        function(data) {
+            var subdata = JSON.stringify(data.field);
+            console.log(subdata);
+            return false;
+        });
+
+    });
+    
+	
+    
+</script>
+</html>
