@@ -10,7 +10,7 @@ export default {
   
   data () {
     return {
-      msg: '仓库'
+      msg: '用户列表'
     }
   }
 }
