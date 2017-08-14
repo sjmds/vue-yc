@@ -6,7 +6,7 @@ table { border-collapse: collapse; }
 ul, ol, li { list-style: none; }
 a { text-decoration: none; cursor: hand;cursor: pointer; color:#333; }
 a:hover{color:#0020e4;}
-img[src*=".jpg"] { border: none; background-image: url(/static/images/loading.gif); background-size: 10px 10px; background-position: center center; background-repeat: no-repeat; }
+img[src*=".jpg"] {max-width: 100%; border: none; background-image: url(/static/images/loading.gif); background-size: 10px 10px; background-position: center center; background-repeat: no-repeat; }
 input { border: 0; outline: 0; }
 input.dialog { width: 0; height: 0; font-size: 0; line-height: 0; border: 0 }
 blockquote: before, blockquote: after, q: before, q: after { content: ''; }

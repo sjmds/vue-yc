@@ -3,6 +3,9 @@ import App from '../App'
 const login = r => require.ensure([], () => r(require('@/page/login/login')), 'login')
 const home = r => require.ensure([], () => r(require('@/page/home/home')), 'home')
 const store = r => require.ensure([], () => r(require('@/page/store/store')), 'store')
+const storeIn = r => require.ensure([], () => r(require('@/page/store/storeIn')), 'storeIn')
+const storeOut = r => require.ensure([], () => r(require('@/page/store/storeOut')), 'storeOut')
+const storeKeepcheck = r => require.ensure([], () => r(require('@/page/store/storeKeepcheck')), 'storeKeepcheck')
 const agentList = r => require.ensure([], () => r(require('@/page/agent/agentList')), 'agentList')
 const terminalList = r => require.ensure([], () => r(require('@/page/terminal/terminalList')), 'terminalList')
 const goodsList = r => require.ensure([], () => r(require('@/page/goods/goodsList')), 'goodsList')
@@ -16,7 +19,10 @@ const userList = r => require.ensure([], () => r(require('@/page/user/userList')
 export default [
 	{
 		path: '/',
-		component: login,	  	
+		redirect: '/login'	  	
+	},{
+		path: '/login',
+		component:login	  	
 	},
 	{
 		path: '/home',					   
@@ -29,7 +35,20 @@ export default [
 		},{
 			path: '/store',					   
 	    	component: store,
-			meta: ['仓库']
+			meta: ['仓库'],
+			children: [{
+				path: 'storeIn',					   
+		    	component: storeIn,
+				meta: ['仓库','入库']
+			},{
+				path: 'storeOut',					   
+		    	component: storeOut,
+				meta: ['仓库','出库']
+			},{
+				path: 'storeKeepcheck',					   
+		    	component: storeKeepcheck,
+				meta: ['仓库','库存盘点']
+			}]
 		},{
 			path: '/agentList',					   
 	    	component: agentList,

@@ -21,7 +21,7 @@ export default {
 @import './assets/css/icons.css';
 @import './assets/css/index.css';
 
-#app{width:100%;height:100%;}
+#app{width:100%;}
 .router-fade-enter-active, .router-fade-leave-active {
     transition: opacity .3s;
 }

@@ -23,20 +23,9 @@ body{background-color:#f2f2f2;}
 .login-user i{margin-right:10px;}
 .login-user a{float:left;margin-right:50px;font-size:20px;}
 /*nav*/
-.content{width:100%;height:100%;position:relative;left:0;top:0;right:0;z-index:0;}
-.nav-con{width:200px;background-color:#4f5a65;position:absolute;left:0;top:0;bottom:0;}
-.nav-con .layui-nav{padding:20px 0;background-color:#4f5a65;}
-.nav-con .layui-nav-tree{}
-.nav-con .layui-nav-tree .layui-nav-item a{padding:0 20px;height:60px;line-height:60px;font-size:18px;color:#ccc;}
-.nav-con .layui-nav-tree .layui-nav-item>a>i{margin-right:10px;}
-.nav-con .layui-nav-tree .layui-nav-more{top:25px;}
-.nav-con .layui-nav-tree .layui-nav-item .layui-nav-child{}
-.nav-con .layui-nav-tree .layui-nav-item .layui-nav-child a{padding-left:60px;}
-.nav-con .layui-nav-tree .layui-nav-bar{background-color: rgba(84, 194, 43, 1)!important;}
-.nav-con .layui-nav-tree .layui-nav-item a:hover
-,.nav-con .layui-nav-tree .layui-nav-itemed>a{background-color: rgba(35, 49, 62, 1);}
-.nav-con .layui-nav-tree .layui-this{background:none!important;}
-.nav-con .layui-nav-tree .layui-this a{background:none!important;color:#56C32B;}
+.content{width:100%;display:flex;display:-webkit-flex;}
+.nav-con{float:left;width:200px;}
+
 /*login*/
 .login-body{width:100%;height:100%;background:url(/static/images/bg-login.jpg) no-repeat;background-size:cover;}
 .login-con{width:620px;height:600px;position:absolute;left:0;top:0;right:0;bottom:0;margin:auto;}
@@ -50,7 +39,7 @@ body{background-color:#f2f2f2;}
 .log-form .form-group input{padding:0 10px;width:365px;height:46px;box-sizing:border-box;border:0;box-shadow:0 0 15px rgba(255, 255, 255, 0.3);;font-size:20px;}
 .log-form .form-group .input-sub{height:60px;background-color: rgba(84, 194, 43, 1);box-shadow: 0px 1px 10px rgba(86, 195, 43, 1);letter-spacing:20px;text-align:center;color:#fff;}
 /*content-con*/
-.content-con{margin-left:200px;padding:40px;width:100%;box-sizing:border-box;}
+.content-con{padding:40px;box-sizing:border-box;flex:1;-webkit-flex:1;}
 .content-padding{padding:20px;box-sizing:border-box;}
 .say-hello{padding:5%;}
 .say-hello p{padding:.75% 0;font-size:30px;}
