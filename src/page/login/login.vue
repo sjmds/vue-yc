@@ -5,15 +5,15 @@
 			<p>EXCELLENT HOME BACKGROUND MANAGEMENT SYSTEM</p>
 			<div class="login-form relative">
 				<div class="login-logo"><img width="110" height="110" src="/static/images/logo.png" alt=""></div>
-				<el-form :model="ruleForm" :rules="rules" ref="ruleForm" label-width="0px" class="demo-ruleForm layui-form">
-	                <el-form-item prop="username">
+				<el-form :model="ruleForm" :rules="rules" ref="ruleForm" label-width="0px" class="log-form">
+	                <el-form-item prop="username" class="form-group">
 	                    <el-input v-model="ruleForm.username" placeholder="username"></el-input>
 	                </el-form-item>
-	                <el-form-item prop="password">
+	                <el-form-item prop="password" class="form-group">
 	                    <el-input type="password" placeholder="password" v-model="ruleForm.password" @keyup.enter.native="submitForm('ruleForm')"></el-input>
 	                </el-form-item>
-	                <div class="login-btn">
-	                    <el-button type="primary" @click="submitForm('ruleForm')">登录</el-button>
+	                <div class="login-btn form-group">
+	                    <el-button type="primary" @click="submitForm('ruleForm')" class="input-sub">登陆</el-button>
 	                </div>
 	                <p style="font-size:12px;line-height:30px;color:#999;">Tips : 用户名和密码随便填。</p>
 	            </el-form>
@@ -22,7 +22,15 @@
 		
 	</div>
 </template>
-
+<style>
+.input-sub{width:365px;height: 60px;
+    background-color: rgba(84, 194, 43, 1);
+    box-shadow: 0px 1px 10px rgba(86, 195, 43, 1);
+    letter-spacing: 20px;
+    font-size:18px;
+    text-align: center;
+    color: #fff;}
+</style>
 <script>
 export default {
     data: function(){
