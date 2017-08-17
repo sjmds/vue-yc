@@ -23,13 +23,15 @@
 	</div>
 </template>
 <style>
-.input-sub{width:365px;height: 60px;
+.input-sub{
+    width:365px;height: 60px;
     background-color: rgba(84, 194, 43, 1);
     box-shadow: 0px 1px 10px rgba(86, 195, 43, 1);
     letter-spacing: 20px;
     font-size:18px;
     text-align: center;
-    color: #fff;}
+    color: #fff;
+}
 </style>
 <script>
 export default {
