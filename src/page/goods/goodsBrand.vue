@@ -3,10 +3,10 @@
     <!-- 头部导航 -->  
     <head-top></head-top>  
     <div class="content">
-      <aside-nav></aside-nav>
-      <div class="content-con fl">
-        storeOut
-      </div>
+    	<aside-nav></aside-nav>
+    	<div class="content-con fl">
+	    	goodsBrand
+	    </div>
     </div>
   </div> 
 </template>
@@ -24,9 +24,9 @@ export default {
     }
   },
   components:{
-    headTop,
-    asideNav
-    
+  	headTop,
+  	asideNav
+  	
   }
 }
 </script>

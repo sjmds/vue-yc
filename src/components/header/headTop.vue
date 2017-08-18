@@ -8,7 +8,7 @@
 		</a>
 	</div>
 	<div class="login-user fr clearfix">
-		<a href="/" class="user-admin"><i class="icons icon-w40 ico-user"></i>admin</a>
+		<a href="#home" class="user-admin"><i class="icons icon-w40 ico-user"></i>admin</a>
 		<a href="#login" class="user-login-out"><i class="icons icon-w40 ico-login-out"></i>退出</a>
 	</div>
 	

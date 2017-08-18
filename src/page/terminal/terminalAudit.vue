@@ -5,7 +5,7 @@
     <div class="content">
       <aside-nav></aside-nav>
       <div class="content-con fl">
-        storeOut
+        terminalAudit
       </div>
     </div>
   </div> 

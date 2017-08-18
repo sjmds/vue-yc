@@ -53,7 +53,7 @@ export default {
     },
     methods: {
         submitForm(formName) {
-            const self = this;
+            const self = this;           
             self.$refs[formName].validate((valid) => {
                 if (valid) {
                     localStorage.setItem('ms_username',self.ruleForm.username);

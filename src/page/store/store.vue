@@ -1,28 +1,32 @@
-<template>
+<template>  
   <div id="app">
-     <!-- 头部导航 -->  
+    <!-- 头部导航 -->  
     <head-top></head-top>  
     <div class="content">
-    	<aside-nav></aside-nav>
-    	<store>{{msg}}</store>
+      <aside-nav></aside-nav>
+      <div class="content-con fl">
+        store
+      </div>
     </div>
-    
-  </div>
+  </div> 
 </template>
-
 <script>
-import store from '@/page/store/store';
+
+import headTop from '@/components/header/headTop';
+import asideNav from '@/components/asideNav/asideNav';
+
 export default {
   
   data () {
     return {
-      msg: '仓库管理'
+      
+      
     }
   },
   components:{
-  	headTop,
-  	store
+    headTop,
+    asideNav
+    
   }
 }
 </script>
-

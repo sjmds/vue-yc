@@ -23,7 +23,7 @@ sub { bottom: -.25em }
 svg:not(:root) { overflow: hidden }
 .clearfix:after {clear: both;visibility: hidden; display: block; content: ''; height: 0;font-size: 0;}
 .clearfix { zoom: 1;*zoom: 1; }
-html,body { /*font-family: Microsoft YaHei, sans-serif, Arial, Helvetica;*/width: 100%;height:100%;background: #fff; font-size:14px;line-height: 1.5; color: #333;  word-wrap: break-word; }
+html,body { /*font-family: Microsoft YaHei, sans-serif, Arial, Helvetica;*/width: 100%;font-size:14px;line-height: 1.5; color: #333;  word-wrap: break-word; }
 .f_sim { font-family: Simsun; }
 .f12 { font-size:12px; }
 .indent { text-indent: 2em; }
