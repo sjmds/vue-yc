@@ -89,6 +89,10 @@ export default [
 	    	component: goodsClassify,
 			meta: ['分类管理']			
 		},{
+			path: '/orderList',					   
+	    	component: orderList,
+			meta: ['订单']
+		},{
 			path: '/details',					   
 	    	component: adList,
 			meta: ['广告管理']

@@ -71,6 +71,7 @@ body{background-color:#f2f2f2;}
 .search-form .layui-btn{width:110px;border-radius:5px;font-size:16px;}
 .layui-input, .layui-select, .layui-textarea{border:1px solid #ccc;}
 /*layui-table*/
+.layui-table{width:100%;}
 .layui-table thead,.layui-table tbody,.layui-table tfoot{width:100%;}
 
 .layui-table thead tr{background-color:#666;}
@@ -84,8 +85,8 @@ body{background-color:#f2f2f2;}
 
 .data-page{margin:20px 30px 0;}
 
-.layui-form input[type="checkbox"],.layui-table input[type="checkbox"]{display:inline-block;width:15px;height:15px;}
-.layui-form .layui-form-checkbox,.search-form .layui-form-checkbox,.add-info-form input[type="checkbox"]{display:none;}
+
+
 /*上下架*/
 .goodsAction{margin-bottom:20px;}
 .goodsAction ul li{float:left;margin-right:10px;padding:0 10px;min-width:80px;height: 40px;border:1px solid #999;text-align:center;line-height:40px;color:#666;cursor:pointer;}

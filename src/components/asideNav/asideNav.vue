@@ -37,7 +37,7 @@
 	          <el-menu-item index="goodsClassify">分类管理</el-menu-item>
 	        </el-menu-item-group>	        
 	      </el-submenu>
-	      <el-menu-item index="order"><i class="icons icon-w24 ico-order"></i>订单</el-menu-item>
+	      <el-menu-item index="orderList"><i class="icons icon-w24 ico-order"></i>订单</el-menu-item>
 	      <el-menu-item index="6"><i class="icons icon-w24 ico-after-sale"></i>售后</el-menu-item>
 	      <el-submenu index="7">
 	        <template slot="title"><i class="icons icon-w24 ico-details"></i>内容</template>
