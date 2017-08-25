@@ -1,19 +1,13 @@
 <template>  
-  <div id="app">
-    <!-- 头部导航 -->  
-    <head-top></head-top>  
-    <div class="content">
-      <aside-nav></aside-nav>
-      <div class="content-con fl">
-        terminalList
-      </div>
-    </div>
-  </div> 
+	<div class="content-con fl">
+		<div class="bg-white content-padding">
+			terminalList
+		</div>
+	</div>
+	
 </template>
 <script>
 
-import headTop from '@/components/header/headTop';
-import asideNav from '@/components/asideNav/asideNav';
 
 export default {
   
@@ -22,11 +16,6 @@ export default {
       
       
     }
-  },
-  components:{
-    headTop,
-    asideNav
-    
   }
 }
 </script>

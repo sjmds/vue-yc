@@ -1,6 +1,7 @@
 import App from '../App'
 
 const login = r => require.ensure([], () => r(require('@/page/login/login')), 'login')
+const manage = r => require.ensure([], () => r(require('@/page/home/manage')), 'manage');
 const home = r => require.ensure([], () => r(require('@/page/home/home')), 'home')
 const store = r => require.ensure([], () => r(require('@/page/store/store')), 'store')
 const storeIn = r => require.ensure([], () => r(require('@/page/store/storeIn')), 'storeIn')
@@ -35,114 +36,107 @@ export default [
 	},{
 		path: '/login',
 		component:login	  	
-	},{
-		path: '',
-		name:'home',
-		component: home,
-		meta: ['首页']
-	},{
-		path: '/home',					   
-	    component: home,
-	    name:'home',  
-	    meta: ['首页']
-	},{
-		path: '/store',					   
-    	component: store,
-		meta: ['仓库'],
+	},
+	{
+		path: '/manage',					   
+	    component: manage,	    
 		children: [{
-			path: 'storeIn',					   
+			path: '',
+			component: home,
+			meta: [],
+		},{
+			path: '/store',					   
+	    	component: store,
+			meta: ['仓库']
+		},{
+			path: '/storeIn',					   
 	    	component: storeIn,
 			meta: ['入库']
 		},{
-			path: 'storeOut',					   
+			path: '/storeOut',					   
 	    	component: storeOut,
 			meta: ['出库']
 		},{
-			path: 'storeKeepcheck',					   
+			path: '/storeKeepcheck',					   
 	    	component: storeKeepcheck,
-			meta: ['库存盘点']
-		}]
-	},{
-		path: '/agentList',					   
-    	component: agentList,
-		meta: ['代理商'],
-		children: [{
-			path: 'agentAudit',					   
+			meta: ['库存盘点']			
+		},{
+			path: '/agentList',					   
+	    	component: agentList,
+			meta: ['代理商']
+		},{
+			path: '/agentAudit',					   
 	    	component: agentAudit,
-			meta: ['代理商审核']
-		}]
-	},{
-		path: '/terminalList',					   
-    	component: terminalList,
-		meta: ['终端店'],
-		children: [{
-			path: 'terminalAudit',					   
+			meta: ['代理商审核']			
+		},{
+			path: '/terminalList',					   
+	    	component: terminalList,
+			meta: ['终端店']
+		},{
+			path: '/terminalAudit',					   
 	    	component: terminalAudit,
-			meta: ['终端店审核']
-		}]
-	},{
-		path: '/goodsList',					   
-    	component: goodsList,
-		meta: ['商品管理'],
-		children: [{
-			path: 'goodsBrand',					   
+			meta: ['终端店审核']		
+		},{
+			path: '/goodsList',					   
+	    	component: goodsList,
+			meta: ['商品管理']
+		},{
+			path: '/goodsBrand',					   
 	    	component: goodsBrand,
 			meta: ['品牌管理']
 		},{
-			path: 'goodsClassify',					   
+			path: '/goodsClassify',					   
 	    	component: goodsClassify,
-			meta: ['分类管理']
-		}]
-	},{
-		path: '/details',					   
-    	component: adList,
-		meta: ['内容'],
-		children: [{
-			path: 'adList',					   
+			meta: ['分类管理']			
+		},{
+			path: '/details',					   
 	    	component: adList,
 			meta: ['广告管理']
 		},{
-			path: 'artList',					   
+			path: '/adList',					   
+	    	component: adList,
+			meta: ['广告管理']
+		},{
+			path: '/artList',					   
 	    	component: artList,
 			meta: ['文章管理']
 		},{
-			path: 'advertising',					   
+			path: '/advertising',					   
 	    	component: advertising,
 			meta: ['广告位管理']
 		},{
-			path: 'appStart',					   
+			path: '/appStart',					   
 	    	component: appStart,
 			meta: ['APP启动页']
 		},{
-			path: 'system',					   
+			path: '/system',					   
 	    	component: system,
 			meta: ['系统公告']
 		},{
-			path: 'commenting',					   
+			path: '/commenting',					   
 	    	component: commenting,
 			meta: ['评论管理']
 		},{
-			path: 'userOpinion',					   
+			path: '/userOpinion',					   
 	    	component: userOpinion,
 			meta: ['app用户意见与反馈']
 		},{
-			path: 'userDeal',					   
+			path: '/userDeal',					   
 	    	component: userDeal,
-			meta: ['用户协议']
-		}]
-	},{
-		path: '/settleList',					   
-    	component: settleList,
-		meta: ['结算'],
-		children: [{
+			meta: ['用户协议']			
+		},{
+			path: '/settleList',					   
+	    	component: settleList,
+			meta: ['结算']
+		},{
 			path: 'settleOnline',					   
 	    	component: settleOnline,
-			meta: ['线上结算']
+			meta: ['线上结算']			
+		},{
+			path: '/userList',					   
+	    	component: userList,
+			meta: ['用户']
 		}]
-	},{
-		path: '/userList',					   
-    	component: userList,
-		meta: ['用户']	
 	}
 	
 ]

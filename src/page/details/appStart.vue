@@ -1,8 +1,12 @@
 <template>
-  <div id="app">
-    <h1>{{ msg }}</h1>
+ 
+    <div class="content-con fl">
+	  	<div class="bg-white content-padding">
+		  	{{ msg }}
+		</div>
+	</div>
     
-  </div>
+ 
 </template>
 
 <script>
@@ -10,7 +14,7 @@ export default {
   
   data () {
     return {
-      msg: '文章列表'
+      msg: 'appStart'
     }
   }
 }
