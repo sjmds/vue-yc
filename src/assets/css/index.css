@@ -28,7 +28,7 @@ body{background-color:#f2f2f2;}
 
 
 /*login*/
-.login-body{width:100%;height:100%;background:url(/static/images/bg-login.jpg) no-repeat;background-size:cover;}
+.login-body{width:100%;height:100%;background:url(/static/images/bg-login.jpg) no-repeat;background-size:cover;position: fixed;}
 .login-con{width:620px;height:600px;position:absolute;left:0;top:0;right:0;bottom:0;margin:auto;}
 .login-con h1,.login-con p{text-align:center;font-weight:bold;color:#fff;}
 .login-con h1{font-size:60px;}

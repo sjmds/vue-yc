@@ -1,5 +1,5 @@
 <template>
-	<div class="login-body relative">
+	<div class="login-body">
 		<div class="login-con clearfix">
 			<h1>优产到家后台管理系统</h1>
 			<p>EXCELLENT HOME BACKGROUND MANAGEMENT SYSTEM</p>
