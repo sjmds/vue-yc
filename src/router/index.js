@@ -35,114 +35,114 @@ export default [
 	},{
 		path: '/login',
 		component:login	  	
-	},
-	{
+	},{
+		path: '',
+		name:'home',
+		component: home,
+		meta: ['首页']
+	},{
 		path: '/home',					   
 	    component: home,
-	    name:'home',   
+	    name:'home',  
+	    meta: ['首页']
+	},{
+		path: '/store',					   
+    	component: store,
+		meta: ['仓库'],
 		children: [{
-			path: '',
-			component: home,
-			meta: ['首页']
+			path: 'storeIn',					   
+	    	component: storeIn,
+			meta: ['入库']
 		},{
-			path: '/store',					   
-	    	component: store,
-			meta: ['仓库'],
-			children: [{
-				path: 'storeIn',					   
-		    	component: storeIn,
-				meta: ['入库']
-			},{
-				path: 'storeOut',					   
-		    	component: storeOut,
-				meta: ['出库']
-			},{
-				path: 'storeKeepcheck',					   
-		    	component: storeKeepcheck,
-				meta: ['库存盘点']
-			}]
+			path: 'storeOut',					   
+	    	component: storeOut,
+			meta: ['出库']
 		},{
-			path: '/agentList',					   
-	    	component: agentList,
-			meta: ['代理商'],
-			children: [{
-				path: 'agentAudit',					   
-		    	component: agentAudit,
-				meta: ['代理商审核']
-			}]
-		},{
-			path: '/terminalList',					   
-	    	component: terminalList,
-			meta: ['终端店'],
-			children: [{
-				path: 'terminalAudit',					   
-		    	component: terminalAudit,
-				meta: ['终端店审核']
-			}]
-		},{
-			path: '/goodsList',					   
-	    	component: goodsList,
-			meta: ['商品管理'],
-			children: [{
-				path: 'goodsBrand',					   
-		    	component: goodsBrand,
-				meta: ['品牌管理']
-			},{
-				path: 'goodsClassify',					   
-		    	component: goodsClassify,
-				meta: ['分类管理']
-			}]
-		},{
-			path: '/details',					   
-	    	component: adList,
-			meta: ['内容'],
-			children: [{
-				path: 'adList',					   
-		    	component: adList,
-				meta: ['广告管理']
-			},{
-				path: 'artList',					   
-		    	component: artList,
-				meta: ['文章管理']
-			},{
-				path: 'advertising',					   
-		    	component: advertising,
-				meta: ['广告位管理']
-			},{
-				path: 'appStart',					   
-		    	component: appStart,
-				meta: ['APP启动页']
-			},{
-				path: 'system',					   
-		    	component: system,
-				meta: ['系统公告']
-			},{
-				path: 'commenting',					   
-		    	component: commenting,
-				meta: ['评论管理']
-			},{
-				path: 'userOpinion',					   
-		    	component: userOpinion,
-				meta: ['app用户意见与反馈']
-			},{
-				path: 'userDeal',					   
-		    	component: userDeal,
-				meta: ['用户协议']
-			}]
-		},{
-			path: '/settleList',					   
-	    	component: settleList,
-			meta: ['结算'],
-			children: [{
-				path: 'settleOnline',					   
-		    	component: settleOnline,
-				meta: ['线上结算']
-			}]
-		},{
-			path: '/userList',					   
-	    	component: userList,
-			meta: ['用户']
+			path: 'storeKeepcheck',					   
+	    	component: storeKeepcheck,
+			meta: ['库存盘点']
 		}]
+	},{
+		path: '/agentList',					   
+    	component: agentList,
+		meta: ['代理商'],
+		children: [{
+			path: 'agentAudit',					   
+	    	component: agentAudit,
+			meta: ['代理商审核']
+		}]
+	},{
+		path: '/terminalList',					   
+    	component: terminalList,
+		meta: ['终端店'],
+		children: [{
+			path: 'terminalAudit',					   
+	    	component: terminalAudit,
+			meta: ['终端店审核']
+		}]
+	},{
+		path: '/goodsList',					   
+    	component: goodsList,
+		meta: ['商品管理'],
+		children: [{
+			path: 'goodsBrand',					   
+	    	component: goodsBrand,
+			meta: ['品牌管理']
+		},{
+			path: 'goodsClassify',					   
+	    	component: goodsClassify,
+			meta: ['分类管理']
+		}]
+	},{
+		path: '/details',					   
+    	component: adList,
+		meta: ['内容'],
+		children: [{
+			path: 'adList',					   
+	    	component: adList,
+			meta: ['广告管理']
+		},{
+			path: 'artList',					   
+	    	component: artList,
+			meta: ['文章管理']
+		},{
+			path: 'advertising',					   
+	    	component: advertising,
+			meta: ['广告位管理']
+		},{
+			path: 'appStart',					   
+	    	component: appStart,
+			meta: ['APP启动页']
+		},{
+			path: 'system',					   
+	    	component: system,
+			meta: ['系统公告']
+		},{
+			path: 'commenting',					   
+	    	component: commenting,
+			meta: ['评论管理']
+		},{
+			path: 'userOpinion',					   
+	    	component: userOpinion,
+			meta: ['app用户意见与反馈']
+		},{
+			path: 'userDeal',					   
+	    	component: userDeal,
+			meta: ['用户协议']
+		}]
+	},{
+		path: '/settleList',					   
+    	component: settleList,
+		meta: ['结算'],
+		children: [{
+			path: 'settleOnline',					   
+	    	component: settleOnline,
+			meta: ['线上结算']
+		}]
+	},{
+		path: '/userList',					   
+    	component: userList,
+		meta: ['用户']	
 	}
 	
 ]
