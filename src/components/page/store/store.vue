@@ -83,34 +83,34 @@
 			    <el-table-column type="expand">
 			      <template scope="props">
 			        <el-form label-position="left" inline class="demo-table-expand" :gutter="15">
-			          <el-form-item class="el-col-10" label="仓库编号：">
+			          <el-form-item label="仓库编号：">
 			            <span>{{ props.row.storeNum }}</span>
 			          </el-form-item>
-			          <el-form-item class="el-col-10" label="仓库名称：">
+			          <el-form-item label="仓库名称：">
 			            <span>{{ props.row.storeTitle }}</span>
 			          </el-form-item>
-			          <el-form-item class="el-col-10" label="仓库类型：">
+			          <el-form-item label="仓库类型：">
 			            <span>{{ props.row.storeType }}</span>
 			          </el-form-item> 
-			          <el-form-item class="el-col-10" label="仓库负责人：">
+			          <el-form-item label="仓库负责人：">
 			            <span>{{ props.row.storePerson }}</span>
 			          </el-form-item>
-			          <el-form-item class="el-col-10" label="联系电话：">
+			          <el-form-item label="联系电话：">
 			            <span>{{ props.row.storeTel }}</span>
 			          </el-form-item>
-			          <el-form-item class="el-col-10" label="面积（m²）：">
+			          <el-form-item label="面积（m²）：">
 			            <span>{{ props.row.storeArea }}</span>
 			          </el-form-item>
-			          <el-form-item class="el-col-10" label="容量（吨）：">
+			          <el-form-item label="容量（吨）：">
 			            <span>{{ props.row.storeDun }}</span>
 			          </el-form-item>
-			          <el-form-item class="el-col-10" label="仓库地址：">
+			          <el-form-item label="仓库地址：">
 			            <span>{{ props.row.storeAddress }}</span>
 			          </el-form-item>
-			          <el-form-item class="el-col-10" label="添加时间：">
+			          <el-form-item label="添加时间：">
 			            <span>{{ props.row.storeDate }}</span>
 			          </el-form-item>
-			          <el-form-item class="el-col-10" label="状态：">
+			          <el-form-item label="状态：">
 			            <span>{{ props.row.storeState ? '<i class="ico-using"></i>启用':'<i class="ico-no-using"></i>禁用'}}</span>
 			          </el-form-item>
 			        </el-form>
@@ -145,7 +145,18 @@
 
 </template>
 <style>
-
+  .demo-table-expand {
+    font-size: 0;
+  }
+  .demo-table-expand label {
+    width: 90px;
+    color: #99a9bf;
+  }
+  .demo-table-expand .el-form-item {
+    margin-right: 0;
+    margin-bottom: 0;
+    width: 50%;
+  }
 </style>
 <script>
 
