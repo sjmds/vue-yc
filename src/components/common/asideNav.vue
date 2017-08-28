@@ -71,6 +71,7 @@
 .nav-con,.nav-con .el-menu-item,.nav-con .el-submenu__title{font-size:18px;}
 .nav-con .el-menu-item{display:block;text-overflow: ellipsis;overflow: hidden;white-space: nowrap;color:#ccc;}
 .nav-con .icons{margin-right:10px;}
+.el-menu-item.is-active{color:#56C32B;}
 </style>
 
 <script>

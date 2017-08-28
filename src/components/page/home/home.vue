@@ -6,30 +6,30 @@
       <p>欢迎来到优产到家后台管理系统~</p>
     </div>
     <div class="nav-home clearfix">
-      <dl><a href="">
+      <router-link to="goodsList" tag="dl">
           <dt><img src="static/images/ico-goods.png"></dt>
           <dd>
             <h3>商品管理</h3>
             <p>快速查阅商品信息</p>
           </dd>
         </a>
-      </dl>
-      <dl><a href="">
+      </router-link>
+      <router-link to="userList" tag="dl">
           <dt><img src="static/images/ico-user.png"></dt>
           <dd>
             <h3>新增用户</h3>
             <p>及时了解用户信息</p>
           </dd>
         </a>
-      </dl>
-      <dl><a href="">
+      </router-link>
+      <router-link to="store" tag="dl">
           <dt><img src="static/images/ico-inventory.png"></dt>
           <dd>
             <h3>库存查询</h3>
             <p>库存信息，一目了然</p>
           </dd>
         </a>
-      </dl>
+      </router-link>
     </div>
     <!-- say-hello -->
   </div>
@@ -46,7 +46,7 @@ export default {
     }
   },
   components:{
-  	
+    
   }
 }
 </script>

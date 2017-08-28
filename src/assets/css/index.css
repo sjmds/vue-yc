@@ -48,42 +48,26 @@ body{background-color:#f2f2f2;}
 .nav-home{}
 .nav-home dl{float:left;margin:2% 2% 0 0;padding:40px;width:32%;box-sizing:border-box;background-color:#fff;}
 .nav-home dl:nth-child(3n+3){margin-right:0;}
-.nav-home dl>a{display:block;width:100%;height:100%;}
+.nav-home dl>a{display:block;}
 .nav-home dl dt{float:left;}
 .nav-home dl dt img{width:100px;height:100px;}
 .nav-home dl dd{float:right;text-align:right;}
 .nav-home dl dd h3{font-size:28px;}
 .nav-home dl dd p{margin-top:5%;font-size:18px;color:#999;}
-.nav-home dl:hover{box-shadow:0 0 15px rgba(0,0,0,.2)}
+.nav-home dl:hover{box-shadow:0 0 15px rgba(0,0,0,.2);}
 /*仓库管理*/
 .sy-tab{}
 .sy-tab ul li{float:left;padding:0 20px;min-width:100px;height:40px;border:1px solid rgba(89, 199, 44, 1);background-color:rgba(255, 255, 255, 1);box-sizing:border-box;font-size:18px;text-align:center;line-height:40px;color:#333;cursor:pointer;}
 .sy-tab ul li a{display:block;}
 .sy-tab ul li.on{background-color:rgba(89, 199, 44, 1);color:#fff;}
 .sy-tab ul li.on a{color:#fff;}
-/*查询form*/
-.layui-form{font-size:16px;}
-.search-form .layui-inline{padding:5px 0;}
-.search-form label{padding:0 10px;}
-.search-form input{width:140px;}
-.layui-upload-button input{width:100%;}
-.search-form .input-longwidth{width:170px;}
-.search-form .layui-btn{width:110px;border-radius:5px;font-size:16px;}
-.layui-input, .layui-select, .layui-textarea{border:1px solid #ccc;}
+
 /*layui-table*/
-.layui-table{width:100%;}
-.layui-table thead,.layui-table tbody,.layui-table tfoot{width:100%;}
 
-.layui-table thead tr{background-color:#666;}
-.layui-table thead tr:hover{background-color:#666;}
-.layui-table tr td{padding:15px 2px;border:1px solid #ccc;text-align:center;}
-.layui-table thead tr td{color:#fff;}
-.layui-table tbody tr td{color:#333;}
-.layui-table .edit-a{display:inline-block;padding:0 15px;color:#56C32B;}
-.layui-table .edit-cancel,.layui-table .more-details{color:#09F;}
-.layui-table .edit-cancel{border-left:1px solid #333;}
+.edit-a{display:inline-block;padding:0 15px;color:#56C32B;}
+.edit-cancel,.more-details{color:#09F;}
+.edit-cancel{border-left:1px solid #333;}
 
-.data-page{margin:20px 30px 0;}
 
 
 
@@ -92,24 +76,7 @@ body{background-color:#f2f2f2;}
 .goodsAction ul li{float:left;margin-right:10px;padding:0 10px;min-width:80px;height: 40px;border:1px solid #999;text-align:center;line-height:40px;color:#666;cursor:pointer;}
 .goodsAction ul li a{color:inherit;}
 .goodsAction ul li.on{border:1px solid rgba(89, 199, 44, 1);background-color:rgba(89, 199, 44, 1) ;color:#fff;}
-/*新增*/
-.add-info-form{}
-.add-info-form .layui-form-label{width:135px;}
-.add-info-form .layui-input-inline{width:260px;}
-.add-info-form .layui-input-inline .yc-s-t{line-height:38px;}
-.longer{width:50%!important;}
-.longauto{width:auto!important;}
-.add-info-form .layui-form-mid{padding-left:15px;padding-right:15px;min-width:380px;background-color: rgba(242, 242, 242, 1);border-radius: 4px;}
-.add-info-form .upload-browse{padding-right:60px;height:36px;border:1px solid rgba(0, 153, 255, 1);box-sizing:border-box;border-radius:4px;line-height:36px;}
-.layui-upload-button{border:1px solid transparent;}
-.add-info-form .upload-browse p{overflow:hidden;padding:0 5px;white-space:nowrap;}
-.add-info-form .upload-browse p img{vertical-align:top;margin-top:2px;margin-right:2px;}
-.add-info-form .upload-browse span{position:absolute;top:0;right:0;padding:0 10px;width:40px;background-color: rgba(0, 153, 255, 1);font-size:12px;text-align:center;color:#fff;}
-.add-info-form .layui-btn{width:120px;font-size:16px;}
-.layui-upload-headimg{width:162px!important;height:162px;border:1px solid #ccc;}
-.upload-headimg{width:100%;height:100%;background:url(/static/images/defaultimg.png) no-repeat;}
-.upload-headimg img{width:100%;height:100%;}
-.yc-upload-text{margin-top:15px;text-align:center;}
+
 /*审核详情*/
 .check-details{padding:0 20px;font-size:16px;}
 .check-details-one{}
@@ -163,10 +130,6 @@ body{background-color:#f2f2f2;}
 /*申请入库*/
 .big-form .layui-form-item .layui-input-inline{float:none;width:auto;}
 /*表格编辑*/
-.edit-table tbody tr td{padding:0;line-height:48px;}
-.edit-table .layui-form-item,
-.edit-table .layui-input-inline{width:100%;height:100%;text-align:left;}
-.edit-table .layui-input-inline input{width:100%;height:48px;border:1px solid transparent;line-height:48px;}
 
 .goods-addbox{padding:20px 0;border:1px solid #ccc;border-top:0;text-align:center;}
 .goods-add{text-decoration:underline;font-size:20px;color: #09F;}
