@@ -3,6 +3,7 @@ const login = r => require.ensure([], () => r(require('@/components/page/login/l
 const Manage = r => require.ensure([], () => r(require('@/components/common/Manage')), 'Manage')
 const home = r => require.ensure([], () => r(require('@/components/page/home/home')), 'home')
 const store = r => require.ensure([], () => r(require('@/components/page/store/store')), 'store')
+const storeAdd = r => require.ensure([], () => r(require('@/components/page/store/storeAdd')), 'storeAdd')
 const storeIn = r => require.ensure([], () => r(require('@/components/page/store/storeIn')), 'storeIn')
 const storeOut = r => require.ensure([], () => r(require('@/components/page/store/storeOut')), 'storeOut')
 const storeKeepcheck = r => require.ensure([], () => r(require('@/components/page/store/storeKeepcheck')), 'storeKeepcheck')
@@ -51,6 +52,10 @@ export default [
 			path: '/store',					   
 	    	component: store,
 			meta: ['仓库']
+		},{
+			path: '/storeAdd',					   
+	    	component: storeAdd,
+			meta: ['仓库新增 ']
 		},{
 			path: '/storeIn',					   
 	    	component: storeIn,

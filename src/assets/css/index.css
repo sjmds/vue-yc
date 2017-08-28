@@ -56,6 +56,9 @@ body{background-color:#f2f2f2;}
 .nav-home dl dd p{margin-top:5%;font-size:18px;color:#999;}
 .nav-home dl:hover{box-shadow:0 0 15px rgba(0,0,0,.2);}
 /*仓库管理*/
+.date-line{text-align:center;}
+.el-form-item{margin-bottom:15px;}
+.el-button{padding-left:30px;padding-right:30px;}
 .sy-tab{}
 .sy-tab ul li{float:left;padding:0 20px;min-width:100px;height:40px;border:1px solid rgba(89, 199, 44, 1);background-color:rgba(255, 255, 255, 1);box-sizing:border-box;font-size:18px;text-align:center;line-height:40px;color:#333;cursor:pointer;}
 .sy-tab ul li a{display:block;}
