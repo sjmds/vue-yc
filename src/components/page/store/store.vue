@@ -115,23 +115,19 @@
 			          </el-form-item>
 			        </el-form>
 			      </template>
-			    </el-table-column>
+			    </el-table-column>			    
 			    <el-table-column type="selection"></el-table-column>
 			    <el-table-column prop="storeNum" label="仓库编号"></el-table-column>
 			    <el-table-column prop="storeTitle" label="仓库名称"></el-table-column>
 			    <el-table-column prop="storeType" label="仓库类型"></el-table-column>
 			    <el-table-column prop="storePerson" label="仓库负责人"></el-table-column>
-			    <el-table-column prop="storeTel" label="联系电话"></el-table-column>
-			    <el-table-column prop="storeArea" label="面积（m²）"></el-table-column>
-			    <el-table-column prop="storeDun" label="容量（吨）"></el-table-column>
-			    <el-table-column prop="storeAddress" label="仓库地址"></el-table-column>
 			    <el-table-column prop="storeDate" label="添加时间"></el-table-column>
 			    <el-table-column prop="storeState" label="状态">
 			      <template scope="scope">
 			      	scope.storeState ? '<i class="ico-using"></i>启用':'<i class="ico-no-using"></i>禁用'
 			      </template>
 			    </el-table-column>
-			    <el-table-column label="操作">
+			    <el-table-column label="操作" align="center">
 			      <template scope="scope">
 			      	<router-link class="blue" to="userDetails">详情</router-link>
 			      </template>
