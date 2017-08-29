@@ -1,21 +1,17 @@
 <template>
-	<div class="content-con fl">
-		<div class="bg-white content-padding">
-		  	{{ msg }}
-		</div>
+    <div class="content-con fl">
+        <div class="bg-white content-padding">
+            {{ msg }}
+        </div>
     </div>
-    
- 
 </template>
-
 <script>
 export default {
-  
-  data () {
-    return {
-      msg: 'adList'
+
+    data() {
+        return {
+            msg: 'adList'
+        }
     }
-  }
 }
 </script>
-
