@@ -1,4 +1,3 @@
-
 const login = r => require.ensure([], () => r(require('@/components/page/login/login')), 'login')
 const Manage = r => require.ensure([], () => r(require('@/components/common/Manage')), 'Manage')
 const home = r => require.ensure([], () => r(require('@/components/page/home/home')), 'home')
@@ -7,7 +6,7 @@ const storeAdd = r => require.ensure([], () => r(require('@/components/page/stor
 const storeIn = r => require.ensure([], () => r(require('@/components/page/store/storeIn')), 'storeIn')
 const storeOut = r => require.ensure([], () => r(require('@/components/page/store/storeOut')), 'storeOut')
 const storeKeepcheck = r => require.ensure([], () => r(require('@/components/page/store/storeKeepcheck')), 'storeKeepcheck')
-const userList = r => require.ensure([], () => r(require('@/components/page/user/userList')), 'userList') 
+const userList = r => require.ensure([], () => r(require('@/components/page/user/userList')), 'userList')
 const agentList = r => require.ensure([], () => r(require('@/components/page/agent/agentList')), 'agentList')
 const agentAudit = r => require.ensure([], () => r(require('@/components/page/agent/agentAudit')), 'agentAudit')
 const terminalList = r => require.ensure([], () => r(require('@/components/page/terminal/terminalList')), 'terminalList')
@@ -29,127 +28,125 @@ const settleOnline = r => require.ensure([], () => r(require('@/components/page/
 
 
 
-export default [
-	{
-		path: '/',
-		redirect: '/login'	  	
-	},{
-		path: '/login',
-		component:login	  	
-	},
-	{
-		path: '/home',					   
-	    component: Manage,	    
-		children: [{
-			path: '',
-			component: home,
-			meta: [],
-		},{
-			path: '/home',
-			component: home,
-			meta: [],
-		},{
-			path: '/store',					   
-	    	component: store,
-			meta: ['仓库']
-		},{
-			path: '/storeAdd',					   
-	    	component: storeAdd,
-			meta: ['仓库新增 ']
-		},{
-			path: '/storeIn',					   
-	    	component: storeIn,
-			meta: ['入库']
-		},{
-			path: '/storeOut',					   
-	    	component: storeOut,
-			meta: ['出库']
-		},{
-			path: '/storeKeepcheck',					   
-	    	component: storeKeepcheck,
-			meta: ['库存盘点']			
-		},{
-			path: '/agentList',					   
-	    	component: agentList,
-			meta: ['代理商']
-		},{
-			path: '/agentAudit',					   
-	    	component: agentAudit,
-			meta: ['代理商审核']			
-		},{
-			path: '/terminalList',					   
-	    	component: terminalList,
-			meta: ['终端店']
-		},{
-			path: '/terminalAudit',					   
-	    	component: terminalAudit,
-			meta: ['终端店审核']		
-		},{
-			path: '/goodsList',					   
-	    	component: goodsList,
-			meta: ['商品管理']
-		},{
-			path: '/goodsBrand',					   
-	    	component: goodsBrand,
-			meta: ['品牌管理']
-		},{
-			path: '/goodsClassify',					   
-	    	component: goodsClassify,
-			meta: ['分类管理']			
-		},{
-			path: '/orderList',					   
-	    	component: orderList,
-			meta: ['订单']
-		},{
-			path: '/details',					   
-	    	component: adList,
-			meta: ['广告管理']
-		},{
-			path: '/adList',					   
-	    	component: adList,
-			meta: ['广告管理']
-		},{
-			path: '/artList',					   
-	    	component: artList,
-			meta: ['文章管理']
-		},{
-			path: '/advertising',					   
-	    	component: advertising,
-			meta: ['广告位管理']
-		},{
-			path: '/appStart',					   
-	    	component: appStart,
-			meta: ['APP启动页']
-		},{
-			path: '/system',					   
-	    	component: system,
-			meta: ['系统公告']
-		},{
-			path: '/commenting',					   
-	    	component: commenting,
-			meta: ['评论管理']
-		},{
-			path: '/userOpinion',					   
-	    	component: userOpinion,
-			meta: ['app用户意见与反馈']
-		},{
-			path: '/userDeal',					   
-	    	component: userDeal,
-			meta: ['用户协议']			
-		},{
-			path: '/settleList',					   
-	    	component: settleList,
-			meta: ['结算']
-		},{
-			path: 'settleOnline',					   
-	    	component: settleOnline,
-			meta: ['线上结算']			
-		},{
-			path: '/userList',					   
-	    	component: userList,
-			meta: ['用户']
-		}]
-	}
-	
-]
+export default [{
+    path: '/',
+    redirect: '/login'
+  }, {
+    path: '/login',
+    component: login
+  },
+  {
+    path: '/home',
+    component: Manage,
+    children: [{
+      path: '',
+      component: home,
+      meta: [],
+    }, {
+      path: '/home',
+      component: home,
+      meta: [],
+    }, {
+      path: '/store',
+      component: store,
+      meta: ['仓库']
+    }, {
+      path: '/storeAdd',
+      component: storeAdd,
+      meta: ['仓库新增 ']
+    }, {
+      path: '/storeIn',
+      component: storeIn,
+      meta: ['入库']
+    }, {
+      path: '/storeOut',
+      component: storeOut,
+      meta: ['出库']
+    }, {
+      path: '/storeKeepcheck',
+      component: storeKeepcheck,
+      meta: ['库存盘点']
+    }, {
+      path: '/agentList',
+      component: agentList,
+      meta: ['代理商']
+    }, {
+      path: '/agentAudit',
+      component: agentAudit,
+      meta: ['代理商审核']
+    }, {
+      path: '/terminalList',
+      component: terminalList,
+      meta: ['终端店']
+    }, {
+      path: '/terminalAudit',
+      component: terminalAudit,
+      meta: ['终端店审核']
+    }, {
+      path: '/goodsList',
+      component: goodsList,
+      meta: ['商品管理']
+    }, {
+      path: '/goodsBrand',
+      component: goodsBrand,
+      meta: ['品牌管理']
+    }, {
+      path: '/goodsClassify',
+      component: goodsClassify,
+      meta: ['分类管理']
+    }, {
+      path: '/orderList',
+      component: orderList,
+      meta: ['订单']
+    }, {
+      path: '/details',
+      component: adList,
+      meta: ['广告管理']
+    }, {
+      path: '/adList',
+      component: adList,
+      meta: ['广告管理']
+    }, {
+      path: '/artList',
+      component: artList,
+      meta: ['文章管理']
+    }, {
+      path: '/advertising',
+      component: advertising,
+      meta: ['广告位管理']
+    }, {
+      path: '/appStart',
+      component: appStart,
+      meta: ['APP启动页']
+    }, {
+      path: '/system',
+      component: system,
+      meta: ['系统公告']
+    }, {
+      path: '/commenting',
+      component: commenting,
+      meta: ['评论管理']
+    }, {
+      path: '/userOpinion',
+      component: userOpinion,
+      meta: ['app用户意见与反馈']
+    }, {
+      path: '/userDeal',
+      component: userDeal,
+      meta: ['用户协议']
+    }, {
+      path: '/settleList',
+      component: settleList,
+      meta: ['结算']
+    }, {
+      path: 'settleOnline',
+      component: settleOnline,
+      meta: ['线上结算']
+    }, {
+      path: '/userList',
+      component: userList,
+      meta: ['用户']
+    }]
+  }
 
+]

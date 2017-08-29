@@ -75,12 +75,12 @@
         <ul>
           <li>启用</li>
           <li>禁用</li>
-          <li @click.native.prevent="deleteRow(index, tableStore)">删除</li>
+          <li @click="deleteRow(tableStore)">删除</li>
         </ul>
       </div>
       <!-- table -->
       <div class="clearfix">
-        <el-table ref="multipleTable" :data="tableStore" border tooltip-effect="dark" style="width: 100%;">
+        <el-table ref="multipleTable" :data="tableStore"  @selection-change="handleSelectionChange" border tooltip-effect="dark" style="width: 100%;">
           <el-table-column type="expand">
             <template scope="props">
               <el-form label-position="left" inline class="demo-table-expand" :gutter="15">
@@ -117,14 +117,14 @@
                 </el-form-item>
               </el-form>
             </template>
-          </el-table-column>
-          <el-table-column type="selection"></el-table-column>
-          <el-table-column prop="storeNum" label="仓库编号"></el-table-column>
-          <el-table-column prop="storeTitle" label="仓库名称"></el-table-column>
-          <el-table-column prop="storeType" label="仓库类型"></el-table-column>
-          <el-table-column prop="storePerson" label="仓库负责人"></el-table-column>
-          <el-table-column prop="storeDate" label="添加时间"></el-table-column>
-          <el-table-column prop="storeState" label="状态">
+          </el-table-column> 
+          <el-table-column type="selection" @selectable="deleteRow(tableStore,index)"  @selection-change="handleSelectionChange"></el-table-column>
+          <el-table-column prop="storeNum" label="仓库编号" sortable></el-table-column>
+          <el-table-column prop="storeTitle" label="仓库名称" sortable></el-table-column>
+          <el-table-column prop="storeType" label="仓库类型" sortable></el-table-column>
+          <el-table-column prop="storePerson" label="仓库负责人" sortable></el-table-column>
+          <el-table-column prop="storeDate" label="添加时间" sortable></el-table-column>
+          <el-table-column prop="storeState" label="状态" sortable>
             <template scope="scope">
               <span v-if="scope.row.storeState"><i class="ico-using"></i>启用</span>
               <span v-else="scope.row.storeState"><i class="ico-no-using"></i>禁用</span>
@@ -137,7 +137,10 @@
           </el-table-column>
         </el-table>
       </div>
-      <div class="data-page"></div>
+      <div class="data-page">
+        <el-pagination @current-change="handleCurrentChange" layout="total,prev,pager, next, jumper" :total="100">
+        </el-pagination>
+      </div>
     </div>
   </div>
 </template>
@@ -168,13 +171,18 @@ export default {
         title: '',
         state: '',
         date1: '',
-        date2: ''
+        date2: ''        
       },
+      //数据总数
+      totalStore:'100',
+      //要提交的数据
+      multipleSelection:[],
+      //表格数据
       tableStore: [{
         storeNum: "001",
-        storeTitle: "青白江直销库",
-        storeType: "米面油",
-        storePerson: "王海",
+        storeTitle: "青白江直销库1",
+        storeType: "米面油1",
+        storePerson: "王海1",
         storeTel: "13021425213",
         storeArea: "1000",
         storeDun: "100",
@@ -183,10 +191,10 @@ export default {
         storeState: true
       }, {
         storeNum: "002",
-        storeTitle: "青白江直销库",
-        storeType: "米面油",
-        storePerson: "王海",
-        storeTel: "13021425213",
+        storeTitle: "青白江直销库2",
+        storeType: "米面油2",
+        storePerson: "王海2",
+        storeTel: "13021425212",
         storeArea: "888",
         storeDun: "98",
         storeAddress: "四川省 成都市 青白江区 某某详细街道地址",
@@ -194,10 +202,10 @@ export default {
         storeState: false
       }, {
         storeNum: "003",
-        storeTitle: "青白江直销库",
-        storeType: "米面油",
-        storePerson: "王海",
-        storeTel: "13021425213",
+        storeTitle: "青白江直销库3",
+        storeType: "米面油3",
+        storePerson: "王海3",
+        storeTel: "13021425211",
         storeArea: "978",
         storeDun: "96",
         storeAddress: "四川省 成都市 青白江区 某某详细街道地址",
@@ -205,10 +213,10 @@ export default {
         storeState: true
       }, {
         storeNum: "004",
-        storeTitle: "青白江直销库",
-        storeType: "米面油",
-        storePerson: "王海",
-        storeTel: "13021425213",
+        storeTitle: "青白江直销库4",
+        storeType: "米面油4",
+        storePerson: "王海4",
+        storeTel: "13021425210",
         storeArea: "999",
         storeDun: "99",
         storeAddress: "四川省 成都市 青白江区 某某详细街道地址",
@@ -220,13 +228,13 @@ export default {
   methods: {
     onSubmit() {
       console.log('submit!');
-    },
-    handleDelete(index, rows) {
+    },  
+    deleteRow(rows,index) {
       this.$confirm('确定删除该数据吗?', {
         confirmButtonText: '确定',
         cancelButtonText: '取消',
         type: 'warning'
-      }).then(() => {
+      }).then(() => {        
         rows.splice(index, 1);
         this.$message({
           type: 'success',
@@ -238,8 +246,14 @@ export default {
           message: '已取消删除'
         });
       });
-
+    },
+    handleSelectionChange(val){      
+      console.log(val)
+    },
+    handleCurrentChange(val) {
+      console.log(`当前页: ${val}`);
     }
+   
   }
 }
 
