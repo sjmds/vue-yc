@@ -46,7 +46,7 @@ body{background-color:#f2f2f2;}
 
 /*商品管理、新增用户*/
 .nav-home{}
-.nav-home dl{float:left;margin:2% 2% 0 0;padding:40px;width:32%;box-sizing:border-box;background-color:#fff;}
+.nav-home dl{float:left;margin:2% 2% 0 0;padding:30px;width:32%;box-sizing:border-box;background-color:#fff;}
 .nav-home dl:nth-child(3n+3){margin-right:0;}
 .nav-home dl>a{display:block;}
 .nav-home dl dt{float:left;}
@@ -183,8 +183,10 @@ body{background-color:#f2f2f2;}
 .totel-price .price-all ul li.last{color:#c36;}
 .totel-price .price-all ul li.last span{font-weight:bold;}
 
-
-
+/**/
+@media screen and (max-width: 1300px){
+	.nav-home dl dt,.nav-home dl dd{float:none;text-align:center;}
+}
 
 
 
