@@ -16,9 +16,9 @@
       <div class="sline"></div>
       <!-- 查询 -->
       <div class="clearfix">
-        <el-form :inline="true" :model="formStore" class="demo-form-inline">
-          <el-form-item label="省份:">
-            <el-select v-model="formStore.area1">
+        <el-form ref="formStore" :inline="true" :model="formStore" :rules="rules" class="demo-form-inline" label-width="110px">
+          <el-form-item label="省份:" prop="address1"> 
+            <el-select v-model="formStore.address1">
               <el-option label="全部" value="全部"></el-option>
               <el-option label="四川省" value="四川省"></el-option>
               <el-option label="浙江省" value="浙江省"></el-option>
@@ -26,8 +26,8 @@
               <el-option label="福建省" value="福建省"></el-option>
             </el-select>
           </el-form-item>
-          <el-form-item label="市区:">
-            <el-select v-model="formStore.area2">
+          <el-form-item label="市区:" prop="address2">
+            <el-select v-model="formStore.address2">
               <el-option label="全部" value="全部"></el-option>
               <el-option label="成都市" value="成都市"></el-option>
               <el-option label="杭州" value="杭州"></el-option>
@@ -35,8 +35,8 @@
               <el-option label="温州" value="温州"></el-option>
             </el-select>
           </el-form-item>
-          <el-form-item label="区县:">
-            <el-select v-model="formStore.area3">
+          <el-form-item label="区县:" prop="address3">
+            <el-select v-model="formStore.address3">
               <el-option label="全部" value="全部"></el-option>
               <el-option label="锦江区" value="锦江区"></el-option>
               <el-option label="西湖区" value="西湖区"></el-option>
@@ -44,10 +44,10 @@
               <el-option label="拱墅区" value="拱墅区"></el-option>
             </el-select>
           </el-form-item>
-          <el-form-item label="仓库名称">
+          <el-form-item label="仓库名称" prop="title">
             <el-input v-model="formStore.title" placeholder="请输入仓库名称"></el-input>
           </el-form-item>
-          <el-form-item label="状态:">
+          <el-form-item label="状态:" prop="state">
             <el-select v-model="formStore.state">
               <el-option label="全部" value="全部"></el-option>
               <el-option label="启用" value="启用"></el-option>
@@ -56,15 +56,19 @@
           </el-form-item>
           <el-form-item label="活动时间">
             <el-col :span="11">
-              <el-date-picker type="date" placeholder="选择日期" v-model="formStore.date1" style="width: 100%;"></el-date-picker>
+              <el-form-item prop="date1">
+                <el-date-picker type="date" placeholder="选择日期" v-model="formStore.date1" style="width: 100%;"></el-date-picker>
+              </el-form-item>
             </el-col>
             <el-col class="date-line" :span="2">-</el-col>
             <el-col :span="11">
-              <el-date-picker type="date" placeholder="选择日期" v-model="formStore.date2" style="width: 100%;"></el-date-picker>
+              <el-form-item prop="date2">
+                <el-date-picker type="date" placeholder="选择日期" v-model="formStore.date2" style="width: 100%;"></el-date-picker>
+              </el-form-item>
             </el-col>
           </el-form-item>
           <el-form-item>
-            <el-button type="primary" @click="onSubmit">查询</el-button>
+            <el-button type="primary" @click="submitForm('formStore')">查询</el-button>
           </el-form-item>
         </el-form>
       </div>
@@ -148,11 +152,6 @@
 .demo-table-expand {
   font-size: 0;
 }
-
-.demo-table-expand label {
-  width: 110px;
-}
-
 .demo-table-expand .el-form-item {
   margin-right: 0;
   margin-bottom: 0;
@@ -165,13 +164,36 @@ export default {
   data() {
     return {
       formStore: {
-        area1: '',
-        area2: '',
-        area3: '',
+        address1: '',
+        address2: '',
+        address3: '',
         title: '',
         state: '',
         date1: '',
         date2: ''        
+      },
+      rules: {
+        address1:[
+          { required: true, trigger: 'change' }
+        ],
+        address2:[
+          { required: true, trigger: 'change' }
+        ],
+        address3:[
+          { required: true, trigger: 'change' }
+        ],
+        title:[
+          { required: true, trigger: 'blur' }
+        ],
+        state:[
+          { required: true, trigger: 'change' }
+        ],
+        date1:[
+          { required: true, type: 'date', trigger: 'change' }
+        ],
+        date2:[
+          { required: true, type: 'date', trigger: 'change' }
+        ]
       },
       //数据总数
       totalStore:'100',
@@ -226,9 +248,16 @@ export default {
     }
   },
   methods: {
-    onSubmit() {
-      console.log('submit!');
-    },  
+    submitForm(formName) {
+      this.$refs[formName].validate((valid) => {
+        if (valid) {
+          alert('submit!');
+        } else {
+          console.log('error submit!!');
+          return false;
+        }
+      });
+    }, 
     deleteRow(rows,index) {
       this.$confirm('确定删除该数据吗?', {
         confirmButtonText: '确定',
