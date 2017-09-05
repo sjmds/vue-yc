@@ -122,7 +122,7 @@
               </el-form>
             </template>
           </el-table-column> 
-          <el-table-column type="selection" @selectable="deleteRow(tableStore,index)"  @selection-change="handleSelectionChange"></el-table-column>
+          <el-table-column type="selection" @selection-change="handleSelectionChange"></el-table-column>
           <el-table-column prop="storeNum" label="仓库编号" sortable></el-table-column>
           <el-table-column prop="storeTitle" label="仓库名称" sortable></el-table-column>
           <el-table-column prop="storeType" label="仓库类型" sortable></el-table-column>
