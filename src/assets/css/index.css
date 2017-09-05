@@ -183,7 +183,8 @@ body{background-color:#f2f2f2;}
 .totel-price .price-all ul li span{float:right;display:inline-block;width:150px;text-align:right;}
 .totel-price .price-all ul li.last{color:#c36;}
 .totel-price .price-all ul li.last span{font-weight:bold;}
-
+/*.el-table*/
+.el-table .cell{white-space:nowrap;}
 /**/
 @media screen and (max-width: 1300px){
 	.nav-home dl dt,.nav-home dl dd{float:none;text-align:center;}
