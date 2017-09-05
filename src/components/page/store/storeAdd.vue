@@ -40,7 +40,7 @@
             <el-input type="number" v-model="formAdd.area" placeholder="请填写仓库面积"></el-input>
           </el-form-item>
           <el-form-item label="容量（吨）：" prop="dun">
-            <el-input v-model="formAdd.dun" placeholder="请填写仓库容量"></el-input>
+            <el-input type="number" v-model="formAdd.dun" placeholder="请填写仓库容量"></el-input>
           </el-form-item>
           <el-form-item label="省份:" prop="address1">
             <el-select v-model="formAdd.address1">
@@ -121,25 +121,25 @@
             { required: true, message: '请选择仓库类型', trigger: 'change' }
           ],
           person:[
-            { required: true}
+            { required: true,message: '请输入仓库负责人'}
           ],
           tel:[
-            { required: true}
+            { required: true,message: '请输入负责人手机号'}
           ],
           area:[
-            { required: true}
+            { required: true,message: '请填写仓库面积'}
           ],
           dun:[
-            { required: true}
+            { required: true,message: '请填写仓库容量'}
           ],
           address1:[
-            { required: true}
+            { required: true,message: '请选择'}
           ],
           address2:[
-            { required: true}
+            {}
           ],
           address3:[
-            { required: true}
+            {}
           ]
         }
       }
