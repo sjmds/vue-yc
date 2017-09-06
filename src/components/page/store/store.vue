@@ -79,7 +79,7 @@
         <ul>
           <li>启用</li>
           <li>禁用</li>
-          <li @click="deleteRow(tableStore)">删除</li>
+          <li>删除</li>
         </ul>
       </div>
       <!-- table -->
@@ -134,9 +134,15 @@
               <span v-else="scope.row.storeState"><i class="ico-no-using"></i>禁用</span>
             </template>
           </el-table-column>
-          <el-table-column label="操作" align="center">
-            <template scope="scope">
-              <router-link class="blue" to="userDetails">详情</router-link>
+          <el-table-column fixed="right" label="操作" width="120" align="center">
+            <template scope="scope">             
+              <el-button @click="storeDetails(scope.$index, scope.row)" type="text" size="small">详情</el-button>
+              <el-button class="color-danger"
+                @click.native.prevent="deleteRow(scope.$index, tableStore)"
+                type="text" size="small"
+                >
+                移除
+              </el-button>
             </template>
           </el-table-column>
         </el-table>
@@ -258,7 +264,10 @@ export default {
         }
       });
     }, 
-    deleteRow(rows,index) {
+    storeDetails(index,row) {        
+      this.$router.push({ path: 'storeDetails/'+row.storeNum});
+    },
+    deleteRow(index,rows) {
       this.$confirm('确定删除该数据吗?', {
         confirmButtonText: '确定',
         cancelButtonText: '取消',

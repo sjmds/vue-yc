@@ -1,15 +1,18 @@
 <template>
+
   <div class="content-con fl">
     <div class="bg-white content-padding">
       <!-- 切换 -->
       <div class="sy-tab clearfix">
         <ul>
           <li>
-            <router-link to="store">仓库管理</router-link>
+            <router-link to="/store">仓库管理</router-link>
           </li>
-          <li class="on">
-            <router-link to="storeAdd">新增</router-link>
+          <li>
+            <router-link to="/storeAdd">新增</router-link>
           </li>
+          <li class="on">详情</li>
+
         </ul>
       </div>
       <!-- 切换 -->
@@ -82,13 +85,26 @@
             <el-input v-model="formAdd.beizhu" placeholder="备注"></el-input>
           </el-form-item>
           <el-form-item>
-            <el-button type="primary" @click="submitForm('formAdd')">提交</el-button>
+            <el-button type="primary" @click="submitForm('formAdd')">保存</el-button>
             <el-button @click="resetForm('formAdd')">取消</el-button>
           </el-form-item>
         </el-form>
       </div>
       <!-- 新增 -->
-      
+      <!-- 详情 -->
+      <div class="xline"></div>
+      <!-- 仓库数量 -->
+      <div class="store-keep clearfix">
+        <dl>
+          <dt>仓库产品数量：<span>2310</span></dt>
+          <dd>
+            <p><router-link to="/storeAdd">入库</router-link></p>
+            <p><router-link to="/storeOut">出库</router-link></p>
+            <p><router-link to="/storeKeepcheck">盘点</router-link></p>
+          </dd>
+        </dl>
+      </div>
+
     </div>
   </div>
 </template>
