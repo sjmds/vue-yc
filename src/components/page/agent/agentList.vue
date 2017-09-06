@@ -107,7 +107,7 @@
                             <td>2017-06-20</td>
                             <td><i class="ico-using"></i>启用</td>
                             <td><span class="firebrick">1000</span></td>
-                            <td><a class="edit-a" href="agent-management-edit.html">编辑</a><a class="edit-a edit-cancel" href="agent-management-details.html">详情</a></td>
+                            <td><a class="edit-a" href="agent-management-edit.html">编辑</a>|<a class="edit-a edit-cancel" href="agent-management-details.html">详情</a></td>
                         </tr>
                         <tr>
                             <td>
@@ -121,7 +121,7 @@
                             <td>2017-06-20</td>
                             <td><i class="ico-no-using"></i>禁用</td>
                             <td><span class="firebrick">1000</span></td>
-                            <td><a class="edit-a" href="agent-management-edit.html">编辑</a><a class="edit-a edit-cancel" href="agent-management-details.html">详情</a></td>
+                            <td><a class="edit-a" href="agent-management-edit.html">编辑</a>|<a class="edit-a edit-cancel" href="agent-management-details.html">详情</a></td>
                         </tr>
                         <tr>
                             <td>
@@ -135,7 +135,7 @@
                             <td>2017-06-20</td>
                             <td><i class="ico-using"></i>启用</td>
                             <td><span class="firebrick">1000</span></td>
-                            <td><a class="edit-a" href="agent-management-edit.html">编辑</a><a class="edit-a edit-cancel" href="agent-management-details.html">详情</a></td>
+                            <td><a class="edit-a" href="agent-management-edit.html">编辑</a>|<a class="edit-a edit-cancel" href="agent-management-details.html">详情</a></td>
                         </tr>
                     </tbody>
                 </table>
