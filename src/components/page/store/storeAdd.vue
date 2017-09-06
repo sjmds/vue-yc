@@ -121,6 +121,7 @@
             { required: true, message: '请选择仓库类型', trigger: 'change' }
           ],
           person:[
+
             { required: true,message: '请输入仓库负责人'}
           ],
           tel:[
@@ -136,11 +137,12 @@
             { required: true,message: '请选择'}
           ],
           address2:[
-            {}
+            { required: true}
           ],
-          address3:[
-            {}
+          address3:[ 
+            { required: true}
           ]
+          
         }
       }
     },

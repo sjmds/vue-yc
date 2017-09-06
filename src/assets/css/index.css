@@ -70,7 +70,7 @@ body{background-color:#f2f2f2;}
 
 .edit-a{display:inline-block;padding:0 15px;color:#56C32B;}
 .edit-cancel,.more-details{color:#09F;}
-.edit-cancel{border-left:1px solid #333;}
+
 .data-page{margin-top:30px;}
 
 
@@ -183,8 +183,10 @@ body{background-color:#f2f2f2;}
 .totel-price .price-all ul li span{float:right;display:inline-block;width:150px;text-align:right;}
 .totel-price .price-all ul li.last{color:#c36;}
 .totel-price .price-all ul li.last span{font-weight:bold;}
+
 /*.el-table*/
 .el-table {}
+
 /**/
 @media screen and (max-width: 1300px){
 	.nav-home dl dt,.nav-home dl dd{float:none;text-align:center;}
