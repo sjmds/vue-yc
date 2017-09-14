@@ -149,10 +149,10 @@
             { required: true,message: '请选择'}
           ],
           address2:[
-            { required: true}
+            {}
           ],
           address3:[ 
-            { required: true}
+            {}
           ]
           
         }
