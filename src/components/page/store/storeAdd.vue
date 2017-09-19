@@ -120,7 +120,7 @@
           address2: '',
           address3: '',
           address4: '',
-          state: '',
+          state: '1',
           beizhu: ''
         },
         rules: {
@@ -164,15 +164,31 @@
           if (valid) {
             console.log(this.formAdd)
             alert('submit!');
-
           } else {
-            console.log('error submit!!');
             return false;
           }
         });
       },
       resetForm(formName) {
-        this.$refs[formName].resetFields();
+        const self=this;
+        self.$confirm('此操作会清空当前表单, 是否继续?', '提示', {
+          confirmButtonText: '确定',
+          cancelButtonText: '取消',
+          type: 'warning'
+        }).then(() => {
+          self.$refs[formName].resetFields();
+          self.$message({
+            type: 'success',
+            message: '清空成功!'
+          });          
+        }).catch(() => {
+          self.$message({
+            type: 'info',
+            message: '已取消清空'
+          });          
+        });
+        
+        
       }
     }
   }

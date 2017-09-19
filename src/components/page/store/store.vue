@@ -77,9 +77,9 @@
       <!-- 上下架 -->
       <div class="goodsAction clearfix">
         <ul>
-          <li>启用</li>
-          <li>禁用</li>
-          <li>删除</li>
+          <li @click="startUse">启用</li>
+          <li @click="disableUse">禁用</li>
+          <li @click="delUse(tableStore)">删除</li>
         </ul>
       </div>
       <!-- table -->
@@ -122,7 +122,7 @@
               </el-form>
             </template>
           </el-table-column> 
-          <el-table-column type="selection" @selection-change="handleSelectionChange"></el-table-column>
+          <el-table-column type="selection" @selection-change="handleSelectionChange(val)"></el-table-column>
           <el-table-column prop="storeNum" label="仓库编号" sortable></el-table-column>
           <el-table-column prop="storeTitle" label="仓库名称" sortable></el-table-column>
           <el-table-column prop="storeType" label="仓库类型" sortable></el-table-column>
@@ -148,7 +148,7 @@
         </el-table>
       </div>
       <div class="data-page">
-        <el-pagination @current-change="handleCurrentChange" layout="total,prev,pager, next, jumper" :total="100">
+        <el-pagination @current-change="handleCurrentPage" layout="total,prev,pager, next, jumper" :total="100">
         </el-pagination>
       </div>
     </div>
@@ -250,7 +250,8 @@ export default {
         storeAddress: "四川省 成都市 青白江区 某某详细街道地址",
         storeDate: '2017/5/20',
         storeState: false
-      }]
+      }],
+      selectTableStore:null
     }
   },
   methods: {
@@ -285,12 +286,54 @@ export default {
         });
       });
     },
-    handleSelectionChange(val){      
-      console.log(val)
+    handleSelectionChange(val){
+      this.selectTableStore=val;
     },
-    handleCurrentChange(val) {
-      console.log(`当前页: ${val}`);
+    handleCurrentPage(val) {
+      console.log(`当前页:${val}`)
+    },
+    startUse(){     
+      const self=this; 
+      if(!self.selectTableStore){
+        self.$message({
+          message: '请先选择你要操作的仓库',
+          type: 'warning'
+        });  
+      }else{    
+        self.selectTableStore.forEach(function(item,index){
+          item.storeState=true;
+        });
+      }
+
+    },
+    disableUse(){
+      const self=this;       
+      if(!self.selectTableStore){
+        self.$message({
+          message: '请先选择你要操作的仓库',
+          type: 'warning'
+        });  
+      }else{
+        self.selectTableStore.forEach(function(item,index){
+          item.storeState=false;
+        });
+      } 
+    },
+    delUse(rows){      
+      const self=this; 
+      if(!self.selectTableStore){
+        self.$message({
+          message: '请先选择你要操作的仓库',
+          type: 'warning'
+        });  
+      }else{  
+        self.selectTableStore.forEach(function(item,index,arr){
+          //self.deleteRow(index,rows)
+          
+        });
+      }
     }
+    
    
   }
 }

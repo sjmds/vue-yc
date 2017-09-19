@@ -188,7 +188,8 @@
         });
       },
       resetForm(formName) {
-        this.$refs[formName].resetFields();
+        const self=this;        
+        self.$router.push('/store');
       }
     }
   }
