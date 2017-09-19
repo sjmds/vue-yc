@@ -274,7 +274,8 @@ export default {
         cancelButtonText: '取消',
         type: 'warning'
       }).then(() => {        
-        rows.splice(index, 1);
+        let r=rows.splice(index, 1);
+        console.log(r)
         this.$message({
           type: 'success',
           message: '删除成功!'
@@ -328,7 +329,8 @@ export default {
         });  
       }else{  
         self.selectTableStore.forEach(function(item,index,arr){
-          //self.deleteRow(index,rows)
+          item.index=index;
+          self.deleteRow(item.index,rows)
           
         });
       }
