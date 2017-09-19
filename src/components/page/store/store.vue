@@ -254,7 +254,16 @@ export default {
       selectTableStore:null
     }
   },
+  computed:{
+    
+  },
   methods: {
+    addIndex(){
+      const self=this;
+      self.tableStore.forEach(function(item,index,arr){
+        item.index=index;
+      });
+    },
     submitForm(formName) {
       this.$refs[formName].validate((valid) => {
         if (valid) {
@@ -329,8 +338,8 @@ export default {
         });  
       }else{  
         self.selectTableStore.forEach(function(item,index,arr){
-          item.index=index;
-          self.deleteRow(item.index,rows)
+          
+          self.deleteRow(index,rows)
           
         });
       }
