@@ -55,17 +55,12 @@
             </el-select>
           </el-form-item>
           <el-form-item label="活动时间">
-            <el-col :span="11">
+            <el-col>
               <el-form-item prop="date1">
-                <el-date-picker type="date" placeholder="选择日期" v-model="formStore.date1" style="width: 100%;"></el-date-picker>
+                <el-date-picker v-model="formStore.datarange" type="datetimerange" placeholder="选择时间范围"></el-date-picker>
               </el-form-item>
             </el-col>
-            <el-col class="date-line" :span="2">-</el-col>
-            <el-col :span="11">
-              <el-form-item prop="date2">
-                <el-date-picker type="date" placeholder="选择日期" v-model="formStore.date2" style="width: 100%;"></el-date-picker>
-              </el-form-item>
-            </el-col>
+            
           </el-form-item>
           <el-form-item>
             <el-button type="primary" @click="submitForm('formStore')">查询</el-button>
@@ -175,8 +170,7 @@ export default {
         address3: '',
         title: '',
         state: '',
-        date1: '',
-        date2: ''        
+        datarange: ''   
       },
       rules: {
         address1:[
@@ -194,10 +188,7 @@ export default {
         state:[
           { required: true, trigger: 'change' }
         ],
-        date1:[
-          { required: true, type: 'date', trigger: 'change' }
-        ],
-        date2:[
+        datarange:[
           { required: true, type: 'date', trigger: 'change' }
         ]
       },
@@ -254,20 +245,12 @@ export default {
       selectTableStore:null
     }
   },
-  computed:{
-    
-  },
-  methods: {
-    addIndex(){
-      const self=this;
-      self.tableStore.forEach(function(item,index,arr){
-        item.index=index;
-      });
-    },
+ 
+  methods: {    
     submitForm(formName) {
       this.$refs[formName].validate((valid) => {
         if (valid) {
-          alert('submit!');
+          console.log('submit!');
         } else {
           console.log('error submit!!');
           return false;
@@ -337,9 +320,24 @@ export default {
           type: 'warning'
         });  
       }else{  
-        self.selectTableStore.forEach(function(item,index,arr){
-          
-          self.deleteRow(index,rows)
+        self.selectTableStore.forEach(function(item){
+          self.$confirm('确定删除该数据吗?', {
+            confirmButtonText: '确定',
+            cancelButtonText: '取消',
+            type: 'warning'
+          }).then(() => {        
+            let r=rows.splice(index, 1);
+            console.log(r)
+            self.$message({
+              type: 'success',
+              message: '删除成功!'
+            });
+          }).catch(() => {
+            self.$message({
+              type: 'info',
+              message: '已取消删除'
+            });
+          });  
           
         });
       }
