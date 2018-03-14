@@ -111,8 +111,8 @@
                   <span>{{ props.row.storeDate }}</span>
                 </el-form-item>
                 <el-form-item label="状态：">
-                  <span v-if="props.row.storeState"><i class="ico-using"></i>启用</span>
-                  <span v-else="props.row.storeState"><i class="ico-no-using"></i>禁用</span>
+                  <span  class="text-center" v-if="props.row.storeState"><i class="ico-using"></i><span>启用</span></span>
+                  <span class="text-center" v-else="props.row.storeState"><i class="ico-no-using"></i><span>禁用</span></span>
                 </el-form-item>
               </el-form>
             </template>
@@ -125,8 +125,8 @@
           <el-table-column prop="storeDate" label="添加时间" sortable></el-table-column>
           <el-table-column prop="storeState" label="状态" sortable>
             <template scope="scope">
-              <span v-if="scope.row.storeState"><i class="ico-using"></i>启用</span>
-              <span v-else="scope.row.storeState"><i class="ico-no-using"></i>禁用</span>
+              <span class="text-center" v-if="scope.row.storeState"><i class="ico-using"></i><span>启用</span></span>
+              <span class="text-center" v-else="scope.row.storeState"><i class="ico-no-using"></i><span>禁用</span></span>
             </template>
           </el-table-column>
           <el-table-column fixed="right" label="操作" width="120" align="center">

@@ -6,7 +6,7 @@
 .xline{border-top:1px dashed #333;}
 
 body{background-color:#f2f2f2;}
-
+span{display:inline-block;}
 .blue{display:inline-block;color:#169BD5;}
 .red{display:inline-block;color:#f00;}
 .green{display:inline-block;color:green;}

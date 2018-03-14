@@ -39,7 +39,9 @@
 </template>
 <script>
 
-
+import md5 from 'js-md5';
+const a= md5('zhibangda2018-03-14 14:32:41');
+console.log(a)
 export default {
   
   data () {
