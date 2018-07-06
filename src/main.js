@@ -8,16 +8,22 @@ import ElementUI from 'element-ui'
 import 'element-ui/lib/theme-default/index.css'
 import App from './App.vue'
 
-Vue.use(ElementUI)
-Vue.use(VueRouter)
-Vue.config.productionTip = false
+Vue.use(ElementUI);
+Vue.use(VueRouter);
+Vue.config.productionTip = false;
 
 const router = new VueRouter({
 	routes,
 	strict: process.env.NODE_ENV !== 'production'
 })
+router.beforeEach((to, from, next) => {
+  if (to.meta && to.meta.length > 0) {
+    document.title = to.meta[0]
+  }
+  next()
+})
 /* eslint-disable no-new */
-new Vue({  
+new Vue({
   router,
   template: '<App/>',
   components: { App }

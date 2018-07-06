@@ -17,7 +17,7 @@
       <!-- 查询 -->
       <div class="clearfix">
         <el-form ref="formStore" :inline="true" :model="formStore" :rules="rules" class="demo-form-inline" label-width="110px">
-          <el-form-item label="省份:" prop="address1"> 
+          <el-form-item label="省份:" prop="address1">
             <el-select v-model="formStore.address1">
               <el-option label="全部" value="全部"></el-option>
               <el-option label="四川省" value="四川省"></el-option>
@@ -60,7 +60,7 @@
                 <el-date-picker v-model="formStore.datarange" type="datetimerange" placeholder="选择时间范围"></el-date-picker>
               </el-form-item>
             </el-col>
-            
+
           </el-form-item>
           <el-form-item>
             <el-button type="primary" @click="submitForm('formStore')">查询</el-button>
@@ -81,7 +81,7 @@
       <div class="clearfix">
         <el-table ref="multipleTable" :data="tableStore"  @selection-change="handleSelectionChange" border tooltip-effect="dark" style="width: 100%;">
           <el-table-column type="expand">
-            <template scope="props">
+            <template slot-scope="props">
               <el-form label-position="left" inline class="demo-table-expand" :gutter="15">
                 <el-form-item label="仓库编号：">
                   <span>{{ props.row.storeNum }}</span>
@@ -116,7 +116,7 @@
                 </el-form-item>
               </el-form>
             </template>
-          </el-table-column> 
+          </el-table-column>
           <el-table-column type="selection" @selection-change="handleSelectionChange(val)"></el-table-column>
           <el-table-column prop="storeNum" label="仓库编号" sortable></el-table-column>
           <el-table-column prop="storeTitle" label="仓库名称" sortable></el-table-column>
@@ -124,13 +124,13 @@
           <el-table-column prop="storePerson" label="仓库负责人" sortable></el-table-column>
           <el-table-column prop="storeDate" label="添加时间" sortable></el-table-column>
           <el-table-column prop="storeState" label="状态" sortable>
-            <template scope="scope">
+            <template slot-scope="scope">
               <span class="text-center" v-if="scope.row.storeState"><i class="ico-using"></i><span>启用</span></span>
               <span class="text-center" v-else="scope.row.storeState"><i class="ico-no-using"></i><span>禁用</span></span>
             </template>
           </el-table-column>
           <el-table-column fixed="right" label="操作" width="120" align="center">
-            <template scope="scope">             
+            <template slot-scope="scope">
               <el-button @click="storeDetails(scope.$index, scope.row)" type="text" size="small">详情</el-button>
               <el-button class="color-danger"
                 @click.native.prevent="deleteRow(scope.$index, tableStore)"
@@ -170,7 +170,7 @@ export default {
         address3: '',
         title: '',
         state: '',
-        datarange: ''   
+        datarange: ''
       },
       rules: {
         address1:[
@@ -245,8 +245,8 @@ export default {
       selectTableStore:null
     }
   },
- 
-  methods: {    
+
+  methods: {
     submitForm(formName) {
       this.$refs[formName].validate((valid) => {
         if (valid) {
@@ -256,8 +256,8 @@ export default {
           return false;
         }
       });
-    }, 
-    storeDetails(index,row) {        
+    },
+    storeDetails(index,row) {
       this.$router.push({ path: 'storeDetails/'+row.storeNum});
     },
     deleteRow(index,rows) {
@@ -265,7 +265,7 @@ export default {
         confirmButtonText: '确定',
         cancelButtonText: '取消',
         type: 'warning'
-      }).then(() => {        
+      }).then(() => {
         let r=rows.splice(index, 1);
         console.log(r)
         this.$message({
@@ -285,14 +285,14 @@ export default {
     handleCurrentPage(val) {
       console.log(`当前页:${val}`)
     },
-    startUse(){     
-      const self=this; 
+    startUse(){
+      const self=this;
       if(!self.selectTableStore){
         self.$message({
           message: '请先选择你要操作的仓库',
           type: 'warning'
-        });  
-      }else{    
+        });
+      }else{
         self.selectTableStore.forEach(function(item,index){
           item.storeState=true;
         });
@@ -300,32 +300,32 @@ export default {
 
     },
     disableUse(){
-      const self=this;       
+      const self=this;
       if(!self.selectTableStore){
         self.$message({
           message: '请先选择你要操作的仓库',
           type: 'warning'
-        });  
+        });
       }else{
         self.selectTableStore.forEach(function(item,index){
           item.storeState=false;
         });
-      } 
+      }
     },
-    delUse(rows){      
-      const self=this; 
+    delUse(rows){
+      const self=this;
       if(!self.selectTableStore){
         self.$message({
           message: '请先选择你要操作的仓库',
           type: 'warning'
-        });  
-      }else{  
+        });
+      }else{
         self.selectTableStore.forEach(function(item){
           self.$confirm('确定删除该数据吗?', {
             confirmButtonText: '确定',
             cancelButtonText: '取消',
             type: 'warning'
-          }).then(() => {        
+          }).then(() => {
             let r=rows.splice(index, 1);
             console.log(r)
             self.$message({
@@ -337,13 +337,13 @@ export default {
               type: 'info',
               message: '已取消删除'
             });
-          });  
-          
+          });
+
         });
       }
     }
-    
-   
+
+
   }
 }
 

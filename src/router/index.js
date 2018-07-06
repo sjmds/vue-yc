@@ -144,7 +144,7 @@ export default [{
       component: settleList,
       meta: ['结算']
     }, {
-      path: 'settleOnline',
+      path: '/settleOnline',
       component: settleOnline,
       meta: ['线上结算']
     }, {
