@@ -12,14 +12,12 @@
 </template>
 <script>
 
-import headTop from './headTop';
-import asideNav from './asideNav';
+import headTop from '@/components/common/headTop';
+import asideNav from '@/components/common/asideNav';
 
 export default {
-
   data () {
     return {
-
 
     }
   },

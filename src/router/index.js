@@ -1,33 +1,33 @@
-const login = r => require.ensure([], () => r(require('@/components/page/login/login')), 'login')
-const Manage = r => require.ensure([], () => r(require('@/components/common/Manage')), 'Manage')
-const home = r => require.ensure([], () => r(require('@/components/page/home/home')), 'home')
-const store = r => require.ensure([], () => r(require('@/components/page/store/store')), 'store')
-const storeDetails = r => require.ensure([], () => r(require('@/components/page/store/storeDetails')), 'storeDetails')
-const storeAdd = r => require.ensure([], () => r(require('@/components/page/store/storeAdd')), 'storeAdd')
-const storeIn = r => require.ensure([], () => r(require('@/components/page/store/storeIn')), 'storeIn')
-const storeOut = r => require.ensure([], () => r(require('@/components/page/store/storeOut')), 'storeOut')
-const storeKeepcheck = r => require.ensure([], () => r(require('@/components/page/store/storeKeepcheck')), 'storeKeepcheck')
-const userList = r => require.ensure([], () => r(require('@/components/page/user/userList')), 'userList')
-const agentList = r => require.ensure([], () => r(require('@/components/page/agent/agentList')), 'agentList')
-const agentAudit = r => require.ensure([], () => r(require('@/components/page/agent/agentAudit')), 'agentAudit')
-const terminalList = r => require.ensure([], () => r(require('@/components/page/terminal/terminalList')), 'terminalList')
-const terminalAudit = r => require.ensure([], () => r(require('@/components/page/terminal/terminalAudit')), 'terminalAudit')
-const goodsList = r => require.ensure([], () => r(require('@/components/page/goods/goodsList')), 'goodsList')
-const goodsBrand = r => require.ensure([], () => r(require('@/components/page/goods/goodsBrand')), 'goodsBrand')
-const goodsClassify = r => require.ensure([], () => r(require('@/components/page/goods/goodsClassify')), 'goodsClassify')
-const orderList = r => require.ensure([], () => r(require('@/components/page/order/orderList')), 'orderList')
-const adList = r => require.ensure([], () => r(require('@/components/page/details/adList')), 'adList')
-const artList = r => require.ensure([], () => r(require('@/components/page/details/artList')), 'artList')
-const advertising = r => require.ensure([], () => r(require('@/components/page/details/advertising')), 'advertising')
-const appStart = r => require.ensure([], () => r(require('@/components/page/details/appStart')), 'appStart')
-const commenting = r => require.ensure([], () => r(require('@/components/page/details/commenting')), 'commenting')
-const system = r => require.ensure([], () => r(require('@/components/page/details/system')), 'system')
-const userDeal = r => require.ensure([], () => r(require('@/components/page/details/userDeal')), 'userDeal')
-const userOpinion = r => require.ensure([], () => r(require('@/components/page/details/userOpinion')), 'userOpinion')
-const settleList = r => require.ensure([], () => r(require('@/components/page/settle/settleList')), 'settleList')
-const settleOnline = r => require.ensure([], () => r(require('@/components/page/settle/settleOnline')), 'settleOnline')
+const _import = (path) => import(`@/components/page/${path}`);
 
-
+const login = () => _import('login/login');
+const Manage = () => _import('manage/index');
+const home = () => _import('home/home');
+const store = () => _import('store/store');
+const storeDetails = () => _import('store/storeDetails');
+const storeAdd = () => _import('store/storeAdd');
+const storeIn = () => _import('store/storeIn');
+const storeOut = () => _import('store/storeOut');
+const storeKeepcheck = () => _import('store/storeKeepcheck');
+const userList = () => _import('user/userList');
+const agentList = () => _import('agent/agentList');
+const agentAudit = () => _import('agent/agentAudit');
+const terminalList = () => _import('terminal/terminalList');
+const terminalAudit = () => _import('terminal/terminalAudit');
+const goodsList = () => _import('goods/goodsList');
+const goodsBrand = () => _import('goods/goodsBrand');
+const goodsClassify = () => _import('goods/goodsClassify');
+const orderList = () => _import('order/orderList');
+const adList = () => _import('details/adList');
+const artList = () => _import('details/artList');
+const advertising = () => _import('details/advertising');
+const appStart = () => _import('details/appStart');
+const commenting = () => _import('details/commenting');
+const system = () => _import('details/system');
+const userDeal = () => _import('details/userDeal');
+const userOpinion = () => _import('details/userOpinion');
+const settleList = () => _import('settle/settleList');
+const settleOnline = () => _import('settle/settleOnline');
 
 export default [{
     path: '/',
